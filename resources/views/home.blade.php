@@ -83,7 +83,7 @@
             <div class="carousel-inner justify-content-center">
                 @foreach($artikels as $i => $artikel)
                 <div class="carousel-item @if($i == 0) {{ 'active' }} @endif justify-content-center">
-                  <img src="img_artikel/{{$artikel->gambar_artikel}}" class="d-block pb-5" width="100%" alt="Responsive imag">
+                  <img src="img_artikel/{{$artikel->gambar_artikel}}" class="d-block pb-5" height="500" width="600" alt="Responsive imag">
                   <h5 style="text-align:center">{{$artikel->nama_artikel}}</h5>
                 </div>
               @endforeach

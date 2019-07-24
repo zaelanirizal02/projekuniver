@@ -10,7 +10,8 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
         <style>
         .foot{
           background-color: #222b38;
@@ -34,46 +35,24 @@
 
 
 
-    <nav class="navbar navbar-expand-lg " style="background-color: #d8f2b6">
-      <div class="container">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark py-2 " style="background-color : #0e74c0">
+    <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center " id="navbarNavAltMarkup">
+      <div class="navbar-nav  font-weight-bold ">
+        <a class="nav-item nav-link px-3" href="#profil">PROFIL <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link px-3" href="#organisasi" rel="page-scroll">ORGANISASI</a>
+        <a class="nav-item nav-link px-3" href="#uks" rel="page-scroll">U K S</a>
+        <a class="nav-item nav-link px-3" href="#dakwah" rel="page-scroll">DAKWAH</a>
+        <a class="nav-item nav-link px-3" href="#kegiatan">KEGIATAN</a>
+        <a class="nav-item nav-link px-3" href="#galeri">GALERI</a>
 
-
-      <a class="navbar-brand" href="/">
-        <img src="/img/logoPPMU.png" alt="Logo" style="">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="btn btn-outline-light text-dark" style="color: white" href="/">HOME <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-light text-dark" style="color: black" href="#">SEJARAH BERDIRI</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-light text-dark" style="color: black" href="#">PROFIL</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-light text-dark" style="color: black" href="#">ORAGANISASI</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-light text-dark" style="color: black" href="#">UKS</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-light text-dark" style="color: black" href="#">LITERATUR</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-light text-dark" style="color: black" href="#">KAJIAN</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-light text-dark" style="color: black " href="#">MUSLIM CENTER</a>
-          </li>
-        </ul>
       </div>
     </div>
-    </nav>
+</div>
+</nav>
 
         <br>
 

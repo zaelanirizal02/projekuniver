@@ -25,6 +25,29 @@
       /* For IE8 and earlier */
     }
 
+    .waktu-slider {
+	position: absolute;
+	width:3900px;
+
+	/*pengaturan durasi lama tampil gambar bisa di atur di bawah ini*/
+	animation-name:slider;
+	animation-duration:16s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count:infinite;
+	-webkit-animation-name:slider;
+	-webkit-animation-duration:16s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-name:slider;
+	-moz-animation-duration:16s;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count:infinite;
+	-o-animation-name:slider;
+	-o-animation-duration:16s;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count:infinite;
+}
+
 
   </style>
 
@@ -146,8 +169,7 @@
             <div class="col">
               <div class="card-header-group bg-transparent" id="headingOne">
                 <h2 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#sejarah" aria-expanded="true" aria-controls="sejarah">
-
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#sejarah" aria-expanded="true" aria-controls="sejarah" data-toggle="tooltip" data-placement="top" title="Sejarah">
                     <img src="img/logoPPMU.png" width="30%" class="rounded-circle img-thumbnail mb-4" href="www.facebook.com">
                   </button>
                 </h2>
@@ -337,7 +359,7 @@
 
       </div>
       <div class="col-xl-2">
-        <a href="fb.com">
+        <a href="fb.com" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
         <img src="img/logoPPMU.png" width="50%" class="rounded-circle img-thumbnail mb-4">
       </a>
       </div>
@@ -399,6 +421,101 @@
 </section>
 <!-- SECTION 2 -->
 
+<!-- GALERI -->
+<section id="galeri" class="galeri">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a href="#">Ini Galeri</a>
+    </div>
+    <div class="col">
+
+    </div>
+    <div class="col text-right">
+      <a href="https://www.facebook.com" target="_blank">
+        <i class="fa fa-facebook-f fa-2x"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <i class="fab fa-facebook-f fa-2x"></i>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Slider/Slider2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Slider/Slider3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/Slider/Slider2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Slider/Slider3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/Slider/Slider3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Slider/Slider2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- END GALERI -->
 
 
 

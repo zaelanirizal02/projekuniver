@@ -35,18 +35,18 @@
 
 
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark py-2 " style="background-color : #0e74c0">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark py-2 text-white" style="background-color : #0e74c0">
     <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center " id="navbarNavAltMarkup">
       <div class="navbar-nav  font-weight-bold ">
+        <a class="nav-item nav-link px-3" href="#kegiatan">KEGIATAN</a>
+        <a class="nav-item nav-link px-3" href="#dakwah" rel="page-scroll">DAKWAH</a>
         <a class="nav-item nav-link px-3" href="#profil">PROFIL <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link px-3" href="#organisasi" rel="page-scroll">ORGANISASI</a>
         <a class="nav-item nav-link px-3" href="#uks" rel="page-scroll">U K S</a>
-        <a class="nav-item nav-link px-3" href="#dakwah" rel="page-scroll">DAKWAH</a>
-        <a class="nav-item nav-link px-3" href="#kegiatan">KEGIATAN</a>
         <a class="nav-item nav-link px-3" href="#galeri">GALERI</a>
 
       </div>

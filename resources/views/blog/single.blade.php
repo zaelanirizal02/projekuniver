@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Artikel-{{$blog}}</title>
-  </head>
-  <body>
-    <h1>halo semua ini laman artikel</h1>
-    <hr>
-    <h2>{{$artikel->tittle}}</h2>
-    <p>{{$artikel->deskripsi}}</p>
+@extends('layouts.master')
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    <hr>
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 70%;
+  padding: 20px;
+}
+</style>
 
 
+<div class="container"style="margin-left:100px; padding-top:100px">
 
-  </body>
-</html>
+
+  <img src="/img_artikel/{{$artikel->gambar_artikel}}" style="width:100%;height:10%">
+  <div class="text"style="border-box">
+    <h1>{{$artikel->nama_artikel}}</h1>
+    <p>{{$artikel->isi_artikel}}</p>
+  </div>
+</div>

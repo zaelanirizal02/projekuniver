@@ -1,79 +1,100 @@
-////////////
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-      <head>///
-        <meta charset="utf-8">
-        <title>@yield('title')</title>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+  <title>@yield('title')</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+  .navbar{
+    background: linear-gradient(to bottom, #0000ff 0%, #0099ff 100%);
+  }
+  * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  border:1px solid black;
+  margin:10px
+}
+
+/* Clearfix (clear floats) */
+/* .row::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+  </style>
+
+</head>
 
 
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
-        <style>
-        .foot{
-          background-color: #222b38;
-          color: white;
-          height: 50px;
-
-          bottom: -100;
-          position: relative;
-          width: 100%;
-        }
-        .imgtrans{
-          opacity: 1.4;
-
-        }
-        </style>
-
-      </head>
-
-
-<body class="">
+<body class="data-spy="scroll" data-target=".navbar" data-offset="50"">
 
 
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark py-2 text-white" style="background-color : #0e74c0">
+  <nav class="navbar navbar-expand-lg navbar-dark py-2 text-white fixed-top" style="border:1px solid black; background-color : transparent">
+
     <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center " id="navbarNavAltMarkup">
-      <div class="navbar-nav  font-weight-bold ">
-        <a class="nav-item nav-link px-3" href="#kegiatan">KEGIATAN</a>
-        <a class="nav-item nav-link px-3" href="#dakwah" rel="page-scroll">DAKWAH</a>
-        <a class="nav-item nav-link px-3" href="#profil">PROFIL <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link px-3" href="#organisasi" rel="page-scroll">ORGANISASI</a>
-        <a class="nav-item nav-link px-3" href="#uks" rel="page-scroll">U K S</a>
-        <a class="nav-item nav-link px-3" href="#galeri">GALERI</a>
 
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="d-flex justify-content-center collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav  font-weight-bold ">
+          <a class="navbar-brand" href="/" style="width:60px; height:50px">
+            <img src="/img/logoPPMU2.png" alt="Logo" style="width:100%; height:40px;" class="rounded img-thumbnail mb-4 container">
+          </a>
+          <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <a class="nav-item nav-link px-3" href="#kegiatan">KEGIATAN</a>
+          <a class="nav-item nav-link px-3" href="#profil">PROFIL <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link px-3" href="#artikel" rel="page-scroll">ARTIKEL</a>
+          <a class="nav-item nav-link px-3" href="#uks" rel="page-scrolls">U K S</a>
+          <a class="nav-item nav-link px-3" href="#organisasi" rel="page-scroll">ORGANISASI</a>
+          <a class="nav-item nav-link px-3" href="#galeri">GALERI</a>
+          <a class="nav-item nav-link px-3" href="#about">ABOUT</a>
+
+        </div>
       </div>
     </div>
-</div>
-</nav>
+      @if(Auth::user())
+      <form class="nav-item" action="/logout" method="post" style="padding-top:9px">
+        @csrf
+        <div class="row float-right">
+          <div class="col-md-4">
 
-        <br>
-
-   @yield('content')
-        <br>
-
-
-        <footer class="foot">
-          <div class="container">
-
-            <div class="row pt-3">
-              <div class="col text-center">
-                <p>&copy Pesantren Mahasiswa Universal 2019.</p>
-              </div>
-            </div>
           </div>
-        </footer>
+          <div class="col-md-4">
+            <button type="submit" name="button">Logout</button>
+          </div>
+        </div>
+
+      </form>
+      @endif
+
+    </div>
+  </nav>
 
 
-        </body>
+
+  @yield('content')
+
+</body>
 
 
-    </html>
+</html>

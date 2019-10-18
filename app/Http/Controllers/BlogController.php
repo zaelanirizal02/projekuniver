@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-use App\Artikel;
-use App\User;
+use Laravel\Artikel;
+use Laravel\User;
 
 class BlogController extends Controller
 {

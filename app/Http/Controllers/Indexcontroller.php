@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-use App\Artikel;
+use Laravel\Artikel;
 
 class Indexcontroller extends Controller
 {
     //
     public function index()
     {
-      $artikels = Artikel::all();
+      $artikels = Artikel::orderBy('created_at', 'desc')->limit(4)->get();
 
       return view ('home')->with('artikels', $artikels);
     }

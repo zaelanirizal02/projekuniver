@@ -5,10 +5,12 @@
 @section('content')
 
 
+<div class="" style="padding-top:100px">
+
 
 <h1 class="text-center">BUAT ARTIKEL</h1>
-<div class="container" style="border: 2px solid black">
-<form action="/blog" method="post" enctype="multipart/form-data">
+<div class="container" style=" width: 500px; height:300px">
+<form action="/blog" method="post" enctype="multipart/form-data" style="padding:10px; border:1px solid black">
 
 
   <div class="form-group">
@@ -28,12 +30,13 @@
 
     <div class="form-group">
     <label for="isi_artikel">Isi Artikel :</label>
-    <textarea name="isi_artikel" rows="8" cols="40"></textarea>
+    <textarea name="isi_artikel" rows="5" cols="45"></textarea>
   </div>
 
         <button type="submit" class="btn btn-primary" style="border: 2px">Create</button>
         {{ csrf_field() }}
     </form>
+  </div>
   </div>
 
     @endsection

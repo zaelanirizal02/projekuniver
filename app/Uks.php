@@ -4,10 +4,10 @@ namespace Laravel;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class Uks extends Model
 {
-    protected $fillable = ['nama_profile','isi_profile','gambar_profile'
+  protected $fillable = ['nama_uks', 'isi_uks','gambar_uks'
   ];
+
   // public $timestamps = false;
-  
 }

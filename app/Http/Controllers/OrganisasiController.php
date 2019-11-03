@@ -19,6 +19,15 @@ class OrganisasiController extends Controller
       return view ('organisasi/home')->with('organisasis', $organisasis);
     }
 
+      public function dasboard()
+    {
+         $organisasis = organisasi::all();
+
+
+      return view ('organisasi/dasboard')->with('organisasis', $organisasis);
+    }
+
+
     public function show($id)
     {
       $unescape = '<script> alert("Assalamualaikum") </script>';
@@ -53,7 +62,7 @@ class OrganisasiController extends Controller
       $organisasi->save();
 
 
-      return redirect('organisasi/create');
+      return redirect('organisasi/dasboard');
     }
 
 
@@ -63,6 +72,8 @@ class OrganisasiController extends Controller
 
       if (!$organisasi)
       dd('Halaman tidak tersedia ');
+
+    // return view('organisasi.edit');
 
       return view ('organisasi/edit', ['organisasi'=>$id, 'organisasi'=>$organisasi]);
     }

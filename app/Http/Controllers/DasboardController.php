@@ -3,6 +3,14 @@
 namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+class DasboardController extends Controller
+{
+    <?php
+
+namespace Laravel\Http\Controllers;
+
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use Laravel\Artikel;
@@ -16,19 +24,8 @@ class BlogController extends Controller
       $artikels = Artikel::all();
 
 
-      return view ('blog/home')->with('artikels', $artikels);
+      return view ('dasboard/home')->with('artikels', $artikels);
     }
-    
-
-    public function dasboard()
-    {
-         $artikels = Artikel::all();
-
-
-      return view ('blog/dasboard')->with('artikels', $artikels);
-    }
-
-
 
     public function show($id)
     {
@@ -39,14 +36,14 @@ class BlogController extends Controller
 
       dd('Halaman tidak ditemukan');
 
-      return view ('blog/single', ['blog'=>$id, 'artikel'=>$artikel]);
+      return view ('dasboard/single', ['dasboard'=>$id, 'artikel'=>$artikel]);
     }
 
 
 
     public function create()
     {
-      return view('blog/create');
+      return view('dasboard/create');
     }
 
 
@@ -65,7 +62,7 @@ class BlogController extends Controller
       $artikel->save();
 
 
-      return redirect('blog');
+      return redirect('dasboard');
     }
 
 
@@ -76,7 +73,7 @@ class BlogController extends Controller
       if (!$artikel)
       dd('Halaman tidak tersedia ');
 
-      return view ('blog/edit', ['blog'=>$id, 'artikel'=>$artikel]);
+      return view ('dasboard/edit', ['dasboard'=>$id, 'artikel'=>$artikel]);
     }
 
 
@@ -99,6 +96,8 @@ class BlogController extends Controller
     {
        $artikel= Artikel::find($id);
        $artikel->delete();
-       return redirect('blog');
+       return redirect('dasboard');
     }
+}
+
 }

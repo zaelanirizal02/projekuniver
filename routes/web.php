@@ -29,15 +29,27 @@ Route::group(['prefix' => 'blog','middleware' => 'auth'], function (){
 });
 
 
+
 Auth::routes();
 Route::get('/blogUser', 'BlogUserController@index');
 Route::get('/{id}', 'BlogController@show')->name('link');
 
-//organisasi
 
+//organisasi
 Route::get('/organisasi/create', 'OrganisasiController@create');
 Route::post('/organisasi', 'OrganisasiController@store');
+
 
 //profile
 Route::get('/profile/create', 'ProfileController@create')->middleware('auth');
 Route::post('/profile', 'ProfileController@store');
+
+
+//uks
+Route::get('/uks/create', 'UksController@create');
+Route::post('/uks', 'UksController@store');
+
+
+//Santri
+Route::get('/santri/create', 'SantriController@create');
+Route::post('/santri', 'SantriController@store');

@@ -18,6 +18,17 @@ class BlogController extends Controller
 
       return view ('blog/home')->with('artikels', $artikels);
     }
+    
+
+    public function dasboard()
+    {
+         $artikels = Artikel::all();
+
+
+      return view ('blog/dasboard')->with('artikels', $artikels);
+    }
+
+
 
     public function show($id)
     {

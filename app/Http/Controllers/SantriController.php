@@ -1,6 +1,7 @@
 <?php
 
 namespace Laravel\Http\Controllers;
+use Session;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -8,13 +9,56 @@ use Illuminate\Support\Facades\DB;
 use Laravel\Santri;
 use Laravel\User;
 
+use Laravel\Exports\SantriExport;
+use Laravel\Imports\SantriImport;
+use Maatwebsite\Excel\Facades\Excel;
+use Laravel\Http\Controllers\Controller;
+
+
+
+
 class SantriController extends Controller
 {
     public function index()
     {
-      $santri = Santri::All();
-      return view('santri/home')->with('santris', $santris);
+      $santris = Santri::all();
+      return view ('santri/home')->with('santris', $santris);
     }
+
+
+    public function export_excel()
+	  {
+		return Excel::download(new SantriExport, 'DataSantri.xlsx');
+	  }
+
+
+
+    public function import_excel(Request $request)
+	  {
+		// validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:csv,xls,xlsx'
+		]);
+
+		// menangkap file excel
+		$file = $request->file('file');
+
+		// membuat nama file unik
+		$nama_file = rand().$file->getClientOriginalName();
+
+		// upload ke folder file_siswa di dalam folder public
+		$file->move('file_santri',$nama_file);
+
+		// import data
+		Excel::import(new SantriImport, public_path('/file_santri/'.$nama_file));
+
+		// notifikasi dengan session
+		Session::flash('sukses','Data Santri Berhasil Diimport!');
+
+		// alihkan halaman kembali
+		return redirect('/santri/home');
+  	 }
+
 
     public function create()
     {
@@ -23,6 +67,7 @@ class SantriController extends Controller
 
     public function show($id)
     {
+
       $santri = Santri::find($id);
 
       if(!$santri)
@@ -40,7 +85,10 @@ class SantriController extends Controller
       $santri->panggilan_santri= $req->panggilan_santri;
       $santri->jk_santri= $req->jk_santri;
       $santri->ttl_santri= $req->ttl_santri;
+      $santri->tempatlahir_santri= $req->tempatlahir_santri;
       $santri->alamat_santri= $req->alamat_santri;
+      $santri->kecamatan_santri= $req->kecamatan_santri;
+      $santri->kota_santri= $req->kota_santri;
       $santri->telepon_santri= $req->telepon_santri;
       $santri->hp_santri= $req->hp_santri;
       $santri->email_santri= $req->email_santri;
@@ -50,7 +98,7 @@ class SantriController extends Controller
       $santri->namaibu_santri= $req->namaibu_santri;
       $santri->pekerjaanibu_santri= $req->pekerjaanibu_santri;
       $santri->alamatortu_santri= $req->alamatortu_santri;
-      $santri->telponortu_santri= $req->telponortu_santri;
+      $santri->teleponortu_santri= $req->teleponortu_santri;
       $santri->hportu_santri= $req->hportu_santri;
       //pendidikan santri
       $santri->pendidikan_santri= $req->pendidikan_santri;
@@ -97,7 +145,10 @@ class SantriController extends Controller
         'panggilan_santri' => $req->panggilan_santri,
         'jk_santri' => $req->jk_santri,
         'ttl_santri' => $req->ttl_santri,
+        'tempatlahir_santri' => $req->tempatlahir_santri,
         'alamat_santri' => $req->alamat_santri,
+        'kecamatan_santri' => $req->kecamatan_santri,
+        'kota_santri' => $req->kota_santri,
         'telepon_santri' => $req->telepon_santri,
         'hp_santri' => $req->hp_santri,
         'email_santri' => $req->email_santri,

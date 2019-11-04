@@ -33,7 +33,7 @@ body {
 <div class="container"style="margin-left:100px; padding-top:100px">
 
 
-  <img src="/img_artikel/{{$artikel->gambar_artikel}}" style="width:100%;height:10%">
+  <img src="/img_artikel/{{$artikel->gambar_artikel}}" style="width:50%;height:400px">
   <div class="text"style="border-box">
     <h1>{{$artikel->nama_artikel}}</h1>
     <p>{{$artikel->isi_artikel}}</p>

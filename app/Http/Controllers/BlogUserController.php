@@ -12,9 +12,7 @@ class BlogUserController extends Controller
 {
     public function index()
     {
-
       $artikels = Artikel::all();
-
 
       return view ('blogUser/home')->with('artikels', $artikels);
     }

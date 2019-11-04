@@ -94,6 +94,18 @@
 
   @yield('content')
 
+  <footer class="foot">
+    <section>
+      <div class="container">
+        <div class="row pt-3">
+          <div class="col text-center">
+            <p>&copy Pesantren Mahasiswa Universal 2019.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
 </body>
 
 

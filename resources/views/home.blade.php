@@ -2,6 +2,13 @@
 
 <style>
 body {
+     background: url('background.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+  }
+
+body {
   background: url('');
   background-size: cover;
   background-attachment: fixed;
@@ -25,7 +32,7 @@ section {cara menampilkan artikel dari databa
 
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
-  background: #42f46e;
+  background: transparent;
   color: white;
   text-shadow: 1px 2px 2px #111;
   transition: all 0.8s;

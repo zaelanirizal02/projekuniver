@@ -13,7 +13,10 @@ class Santri extends Model
         'panggilan_santri' ,
         'jk_santri' ,
         'ttl_santri' ,
+        'tempatlahir_santri',
         'alamat_santri' ,
+        'kecamatan_santri',
+        'kota_santri',
         'telepon_santri' ,
         'hp_santri' ,
         'email_santri' ,
@@ -24,7 +27,7 @@ class Santri extends Model
         'namaibu_santri' ,
         'pekerjaanibu_santri' ,
         'alamatortu_santri' ,
-        'telponortu_santri' ,
+        'teleponortu_santri' ,
         'hportu_santri' ,
 
   //Pendidikan Santri

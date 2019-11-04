@@ -16,12 +16,15 @@ class Santri extends Migration
         //
         Schema::create('santris', function (Blueprint $table) {
           $table->bigIncrements('id');
-          $table->integer('nis_santri');
+          $table->string('nis_santri');
           $table->string('nama_santri');
           $table->string('panggilan_santri');
           $table->string('jk_santri');
           $table->date('ttl_santri');
+          $table->string('tempatlahir_santri');
           $table->text('alamat_santri');
+          $table->string('kecamatan_santri');
+          $table->string('kota_santri');
           $table->string('telepon_santri');
           $table->string('hp_santri');
           $table->string('email_santri');
@@ -32,7 +35,7 @@ class Santri extends Migration
           $table->string('namaibu_santri');
           $table->string('pekerjaanibu_santri');
           $table->text('alamatortu_santri');
-          $table->string('telponortu_santri');
+          $table->string('teleponortu_santri');
           $table->string('hportu_santri');
 
         //Pendidikan Santri

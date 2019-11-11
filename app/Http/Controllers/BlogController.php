@@ -65,7 +65,7 @@ class BlogController extends Controller
       $artikel->save();
 
 
-      return redirect('blog');
+      return redirect('blog/dasboard');
     }
 
 

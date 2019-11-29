@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use Laravel\Uks;
-use Laravel\User;
+use Laravel\user;
 
 class UksController extends Controller
 {
     public function index()
     {
-      $profles = Uks::All();
+      $ukss = uks::all();
       return view('uks/home')->with('ukss', $ukss);
     }
 

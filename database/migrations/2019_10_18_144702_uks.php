@@ -13,7 +13,7 @@ class Uks extends Migration
      */
     public function up()
     {
-      Schema::create('uks', function (Blueprint $table) {
+      Schema::create('ukss', function (Blueprint $table) {
         $table->bigIncrements('id');
         $table->string('nama_uks');
         $table->string('gambar_uks');

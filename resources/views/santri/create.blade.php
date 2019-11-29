@@ -26,8 +26,8 @@
   </div>
 
   <div class="form-group row">
-    <label for="nama_santri" class="col-sm-3 col-form-label">Nama Lengkap</label>
-      <div class="col-sm-9">
+    <label for="nama_santri" class="col-sm-3 col-form-label" alt="responsive">Nama Lengkap</label>
+      <div class="col-md-9">
         <input type="text" class="form-control" name="nama_santri" id="nama_santri">
     </div>
   </div>

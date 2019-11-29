@@ -304,10 +304,12 @@
       <input type="text" class="form-control" name="penyakit_santri"id="penyakit_santri" value="{{$santri->penyakit_santri}}">
     </div>
  </div>
+
  <div class="form-group row mt-4">
     <label for="gambar_santri" class="col-sm-3 col-form-label">Upload Photo :</label>
+    <img width="150px" src="{{ url('/img_santri/'.$santri->gambar_santri) }}">
     <div class="col-sm-9">
-      <input type="file" class="form-control" name="gambar_santri" id="gambar_santri" style="width:300px;height:50px" value="{{$santri->gambar_santri}}">
+      <input type="file" class="form-control" name="gambar_santri" id="gambar_santri" style="width:300px;height:50px" value="{{ url('/img_santri/'.$santri->gambar_santri) }}">
 
     </div>
  </div>

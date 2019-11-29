@@ -13,9 +13,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <style>
-  .navbar{
-    background: linear-gradient(to bottom, #0000ff 0%, #0099ff 100%);
-  }
+
   * {
   box-sizing: border-box;
 }
@@ -38,40 +36,42 @@
 
 </head>
 
+<body class="data-spy=" scroll" data-target=".navbar" data-offset="50"">
 
-<body class="data-spy="scroll" data-target=".navbar" data-offset="50"">
-
-
-
-  <nav class="navbar navbar-expand-lg navbar-dark py-2 text-white fixed-top" style="border:1px solid black; background-color : transparent">
-
-    <div class="container">
-
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container-fluid text-center">
+  <br>
+  <h1>Disini templat leaflet</h1>
+  <br>
+  </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+      <div class="container">
+      <a class="navbar-brand" href="/">BERANDA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="d-flex justify-content-center collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav  font-weight-bold ">
-          <a class="navbar-brand" href="/" style="width:60px; height:50px">
-            <img src="/img/logoPPMU2.png" alt="Logo" style="width:100%; height:40px;" class="rounded img-thumbnail mb-4 container">
-          </a>
-          <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-          <a class="nav-item nav-link px-3" href="#kegiatan">KEGIATAN</a>
-          <a class="nav-item nav-link px-3" href="#profil">PROFIL <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link px-3" href="#artikel" rel="page-scroll">ARTIKEL</a>
-          <a class="nav-item nav-link px-3" href="#uks" rel="page-scrolls">U K S</a>
-          <a class="nav-item nav-link px-3" href="#organisasi" rel="page-scroll">ORGANISASI</a>
-          <a class="nav-item nav-link px-3" href="#galeri">GALERI</a>
-          <a class="nav-item nav-link px-3" href="#about">ABOUT</a>
 
-        </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto font-weight-bold">
+          <li class="nav-item">
+            <a class="nav-link" href="/profile/home">PROFIL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/organisasi/home">ORGANISASI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/uks/home">UKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog/home">Artikel</a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
-    </div>
+
       @if(Auth::user())
       <form class="nav-item" action="/logout" method="post" style="padding-top:9px">
         @csrf
@@ -86,26 +86,38 @@
 
       </form>
       @endif
-
-    </div>
+      </div>
   </nav>
+
+
+
 
 
 
   @yield('content')
 
-  <footer class="foot">
-    <section>
-      <div class="container">
-        <div class="row pt-3">
-          <div class="col text-center">
-            <p>&copy Pesantren Mahasiswa Universal 2019.</p>
-          </div>
+
+  <!-- Footer -->
+
+
+    <!-- Copyright -->
+
+
+
+    <!-- Copyright -->
+
+
+  <!-- Footer -->
+
+  <section id="footer" class="footer">
+    <div class="jumbotron-fluid bg-dark text-light" >
+      <div class="container text-center">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a > Universal </a>
         </div>
       </div>
-    </section>
-  </footer>
-
+    </div>
+  </section>
 </body>
 
 

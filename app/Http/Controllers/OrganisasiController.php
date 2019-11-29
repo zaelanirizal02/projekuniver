@@ -12,10 +12,7 @@ class OrganisasiController extends Controller
 {
     public function index()
     {
-
       $organisasis = organisasi::all();
-
-
       return view ('organisasi/home')->with('organisasis', $organisasis);
     }
 

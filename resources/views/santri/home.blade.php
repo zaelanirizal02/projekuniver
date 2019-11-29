@@ -82,7 +82,7 @@
     <tr>
       <td>{{$no++}}</td>
       <td>
-        <a href="{{ route('link', $santri->id) }}">{{$santri->nama_santri}}</a>
+        <a href="{{ route('linksantri', $santri->id) }}">{{$santri->nama_santri}}</a>
       </td>
       <td>{{$santri->jk_santri}}</td>
       <td>{{$santri->angkatan_santri}}</td>
@@ -95,7 +95,7 @@
       </form>
 
       <span style="padding:5px">|</span>
-      <a class="btn btn-success" href="{{route('ngedit', $santri->id)}}">EDIT</a>
+      <a class="btn btn-success" href="{{route('ngeditsantri', $santri->id)}}">EDIT</a>
       </td>
 
 

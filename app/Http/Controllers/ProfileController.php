@@ -13,7 +13,7 @@ class ProfileController extends Controller
     public function index()
     {
       $profles = Profile::All();
-      return view('profile/home')->with('profiles', $profiles);
+      return view('profile/home', ['profiles'=>$profiles]);
     }
 
     public function create()

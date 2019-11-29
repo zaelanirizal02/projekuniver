@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
 @section('title')
-Universal | data organisasi
+Universal | Data Artikel
 @endsection
 
 @section('content')
 <div class="container"style="padding-top:100px">
-  <h1 class="text-center">Daftar Artikel</h1
+  <h1 class="text-center">Daftar Organisasi PMMU</h1
   <hr>
 
   <a href="/organisasi/create" class="btn btn-info">Create</a>
@@ -38,7 +38,7 @@ Universal | data organisasi
       </form>
 
       <span style="padding:5px">|</span>
-      <a class="btn btn-success" href="{{route('ngedit', $organisasi->id)}}">Edit</a>
+      <a class="btn btn-success" href="{{route('ngeditorganisasi', $organisasi->id)}}">Edit</a>
       </td>
 
 

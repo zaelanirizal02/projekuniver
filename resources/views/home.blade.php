@@ -154,12 +154,41 @@ section {cara menampilkan artikel dari databa
           <!-- Tab panes -->
           <div class="tab-content">
             <div id="menuBerita" class="container tab-pane active"><br>
-              <h3>Berita</h3>
-              <p>ini isi dari Berita</p>
+              <div class="card rounded my-3" style="max-width: 500px;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 text-center py-3">
+                      <img src="img/logoPPMU.png" class="card-img img-thumbnail rounded mx-auto d-block" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body text-sm-left">
+                        <h5 class="card-title" href="/" >Berita 1</h5>
+                        <p class="card-text">Isi Berita 1</p>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div id="menuArtikel" class="container tab-pane fade"><br>
-              <h3>Artikel</h3>
-              <p>Ini isi dari Artikel</p>
+              <div class="card rounded my-3" style="max-width: 500px;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 text-center py-3">
+                      <img src="img/logoPPMU.png" class="card-img img-thumbnail rounded mx-auto d-block" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body text-sm-left">
+                        <h5 class="card-title" href="/" >Artikel 1</h5>
+                        <p class="card-text">Isi artikel 1</p>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -217,24 +246,182 @@ section {cara menampilkan artikel dari databa
 <!-- Page 3 -->
 <section id="page3">
   <div class="container">
-    <div class="row">
-      baris 1
-    </div>
-    <div class="row">
-      Baris 2
-    </div>
+    <div class="row" style="padding-top:50px; padding-bottom:50px">
+      <div class="col-sm-6 rounded-lg" >
+        <div class="container">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs font-weight-bold" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#menuDownload">DOWNLOAD</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#menuPSB">PENERIMAAN SANTRI BARU</a>
+            </li>
+          </ul>
 
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="menuDownload" class="container tab-pane active"><br>
+              <div class="card rounded my-3" style="max-width: 500px;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 text-center py-3">
+                      <img src="img/logoPPMU.png" class="card-img img-thumbnail rounded mx-auto d-block" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body text-sm-left">
+                        <h5 class="card-title" href="/" >Download 1</h5>
+                        <p class="card-text">File Download</p>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div id="menuPSB" class="container tab-pane fade"><br>
+              <div class="card rounded my-3" style="max-width: 500px;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 text-center py-3">
+                      <img src="img/logoPPMU.png" class="card-img img-thumbnail rounded mx-auto d-block" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body text-sm-left">
+                        <h5 class="card-title" href="/" >Persyaratan</h5>
+                        <p class="card-text">isi dari Persyaratan</p>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 rounded-lg">
+        <div class="jumbotron ">
+          <div class="row">
+
+              <div class="container">
+                <div class="row">
+                  <div class="card-group">
+                    <div class="card bg-dark text-white mx-1 mb-1 rounded-lg" href="/">
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" style="opacity:0.5">
+                          <div class="carousel-item active">
+                              <img src="img/Slider1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/Slider3.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/Slider2.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">BERITA</h5>
+                      </div>
+                    </div>
+                    <div class="card bg-dark text-white mx-1 mb-1 rounded-lg" href="/">
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" style="opacity:0.5">
+                          <div class="carousel-item active">
+                              <img src="img/Slider3.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/Slider1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/Slider2.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">ARTIKEL</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+          <div class="row">
+
+              <div class="container">
+                <div class="row">
+                  <div class="card-group">
+                    <div class="card bg-dark text-white mx-1 my-1 rounded-lg" href="/">
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" style="opacity:0.5">
+                          <div class="carousel-item active">
+                              <img src="img/Slider2.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/Slider1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/Slider3.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">FASILITAS</h5>
+                      </div>
+                    </div>
+                    <div class="card bg-dark text-white mx-1 my-1 rounded-lg" href="/">
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" style="opacity:0.5">
+                          <div class="carousel-item active">
+                              <img src="img/Slider1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/Slider3.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/Slider2.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">UKS</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-
-
-
-
-
 <!-- END page 3 -->
 
-    <!-- UKS -->
+<!-- Page 4 kontak -->
+<section id="kontak" class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 rounded-lg">
+        <div class="jumbotron">
+          ce
+        </div>
+      </div>
+      <div class="col-sm-6 rounded-lg">
+        <div class="jumbotron">
+          ce
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- END Page 4 kontak -->
 
 
 

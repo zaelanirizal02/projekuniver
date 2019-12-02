@@ -5,7 +5,6 @@ Universal | Data Artikel
 @endsection
 
 @section('content')
-
 <div class="container"style="padding-top:100px">
   <h1 class="text-center">Daftar Organisasi PMMU</h1
   <hr>

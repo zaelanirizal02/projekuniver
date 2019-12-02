@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use Laravel\Artikel;
+use Laravel\Uks;
 
 class Indexcontroller extends Controller
 {

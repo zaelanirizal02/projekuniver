@@ -12,8 +12,8 @@ class UksController extends Controller
 {
     public function index()
     {
-      $profles = Uks::All();
-      return view('uks/home')->with('ukss', $ukss);
+      $uks = Uks::All();
+      return view('uks/home')->with('ukss', $uks);
     }
 
     public function create()
@@ -44,7 +44,7 @@ class UksController extends Controller
       $uks->gambar_uks = $newName;
       $uks->save();
 
-      return redirect('uks');
+      return redirect('/dashboard/uks');
     }
 
     public function edit($id)

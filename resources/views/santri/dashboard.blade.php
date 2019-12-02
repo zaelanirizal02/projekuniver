@@ -1,15 +1,14 @@
-@extends('layouts.master')
+@extends('layout_dashboard.admin')
 
 @section('title', 'universal | home')
 
 
 @section('content')
-<div class="jumbotron jumbotron-fluid" style="background-color:#d1d1d1">
   <div class="container">
     <h1 class="display-4 text-center pt-4 font-weight-bold">DATA SANTRI</h1>
       <h3 class="lead text-center font-weight-bold pt-0">Pondok Pesantren Mahasiswa Universal</h3>
   </div>
-</div>
+
 <div class="container">
 
   <a href="/santri/create" class="btn btn-info">Create</a>
@@ -81,9 +80,7 @@
     @foreach($santris as $santri)
     <tr>
       <td>{{$no++}}</td>
-      <td>
-        <a href="{{ route('link', $santri->id) }}">{{$santri->nama_santri}}</a>
-      </td>
+      <td>{{$santri->nama_santri}}</td>
       <td>{{$santri->jk_santri}}</td>
       <td>{{$santri->angkatan_santri}}</td>
       <td>{{$santri->kota_santri}}</td>
@@ -95,7 +92,7 @@
       </form>
 
       <span style="padding:5px">|</span>
-      <a class="btn btn-success" href="{{route('ngedit', $santri->id)}}">EDIT</a>
+      <a class="btn btn-success" href="{{route('ngeditsantri', $santri->id)}}">EDIT</a>
       </td>
 
 

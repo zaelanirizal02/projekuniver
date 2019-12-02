@@ -15,7 +15,7 @@ body {
   background-repeat: no-repeat;
 }
 
-section {cara menampilkan artikel dari databa
+section {cara menampilkan uks dari databa
   min-height: 420px;
 }
 
@@ -148,9 +148,9 @@ section {cara menampilkan artikel dari databa
               <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner justify-content-center" style="background:">
-              @foreach($artikels as $i => $artikel)
+              @foreach($ukss as $i => $uks)
               <div class="carousel-item @if($i == 0) {{ 'active' }} @endif justify-content-center">
-                <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block" alt="Cinque Terre" "border" height="400px" width="100%"></a>
+                <a href="{{ route('link', $uks->id) }}"><img src="img_uks/{{$uks->gambar_uks}}" class="mx-auto d-block" alt="Cinque Terre" "border" height="400px" width="100%"></a>
 
               </div>
               @endforeach
@@ -475,20 +475,20 @@ Komponen Kurikulum Pondok Pesantren Mahasiswa Universal mencerminkan integrasi k
     <!-- END PROFIL -->
 
     <!-- UKS -->
-    <section id="artikel" class="artikel" style="padding-top:100px; background-color:">
+    <section id="uks" class="uks" style="padding-top:100px; background-color:">
       <div class="container"style="">
         <center>
           <h1><strong style="color:black"> Artikel Santri</strong><h1>
           </center>
-        @foreach($artikels as $artikel)
+        @foreach($ukss as $uks)
         <div id="social"class="col-md-3"style="float:left">
 
 
-        <a href="{{ route('link', $artikel->id) }}" style="width:300px; height: 300px;border:1px solid black;margin:5px;">
+        <a href="{{ route('linkuks', $uks->id) }}" style="width:300px; height: 300px;border:1px solid black;margin:5px;">
 
 
-          <img src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:100%; height:50%">
-          <p style="margin-left:11%">{{ str_limit($artikel->isi_artikel, 180,'baca selengkapnya ....')}}</p>
+          <img src="img_uks/{{$uks->gambar_uks}}" alt="Snow" style="width:100%; height:50%">
+          <p style="margin-left:11%">{{ str_limit($uks->isi_uks, 180,'baca selengkapnya ....')}}</p>
 
 
         </a>

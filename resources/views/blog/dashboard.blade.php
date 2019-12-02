@@ -34,12 +34,12 @@ Universal | Data Artikel
           @foreach($artikels as $artikel)
           <tr>
             <td>{{$no++}}</td>
-            <td><a href="{{ route('link', $artikel->id) }}">{{$artikel->nama_artikel}}</a>
+            <td><a href="{{ route('linkartikel', $artikel->id) }}">{{$artikel->nama_artikel}}</a>
             </td>
             <td>{{$artikel->jenis_artikel}}</td>
             <td>{{$artikel->gambar_artikel}}</td>
              <td>
-              <form style="float:left" action="/artikel/{{$artikel->id}}" method="post">
+              <form style="float:left" action="/blog/{{$artikel->id}}" method="post">
               <input class="btn btn-danger" type="submit" name="submit" value="delete">
               <input type="hidden" name="_method" value="DELETE">
               {{ csrf_field() }}

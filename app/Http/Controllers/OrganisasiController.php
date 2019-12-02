@@ -19,12 +19,12 @@ class OrganisasiController extends Controller
       return view ('organisasi/home')->with('organisasis', $organisasis);
     }
 
-      public function dasboard()
+      public function dashboard()
     {
          $organisasis = organisasi::all();
 
 
-      return view ('organisasi/dasboard')->with('organisasis', $organisasis);
+      return view ('organisasi/dashboard')->with('organisasis', $organisasis);
     }
 
 
@@ -50,7 +50,7 @@ class OrganisasiController extends Controller
 
 
     public function store(Request $req)
-    {
+    {$GLOBALS['variable'] = something;
       $organisasi = new Organisasi;
       $organisasi->jenis_organisasi = $req->jenis_organisasi;
       $organisasi->isi_organisasi = $req->isi_organisasi;
@@ -62,7 +62,7 @@ class OrganisasiController extends Controller
       $organisasi->save();
 
 
-      return redirect('organisasi/dasboard');
+      return redirect('organisasi/dashboard');
     }
 
 

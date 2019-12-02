@@ -25,7 +25,7 @@ Route::group(['prefix' => 'blog','middleware' => 'auth'], function (){
   Route::post('/', 'BlogController@store');
 
 
-  Route::get('/{id}', 'BlogController@show')->name('link');
+  Route::get('/{id}', 'BlogController@show')->name('linkartikel');
 
   Route::get('/{id}/edit', 'BlogController@edit')->name('ngeditartikel');
   Route::put('/{id}', 'BlogController@update');
@@ -46,7 +46,7 @@ Route::get('/organisasi/home', 'OrganisasiController@index');
 
 Route::get('/organisasi/create', 'OrganisasiController@create');
 Route::post('/organisasi', 'OrganisasiController@store');
-Route::get('/organisasi/dasboard', 'OrganisasiController@dasboard');
+Route::get('/organisasi/dashboard', 'OrganisasiController@dashboard');
 
 Route::get('/organisasi/{id}', 'OrgainsasiController@show')->name('linkorganisasi');
 
@@ -66,7 +66,7 @@ Route::post('/profile', 'ProfileController@store');
 
 Route::get('/profile/{id}', 'ProfileController@show')->name('linkprofile');
 
-Route::get('/profile/{id}/edit', 'ProfileController@edit')->name('ngeditprofiles');
+Route::get('/profile/{id}/edit', 'ProfileController@edit')->name('ngeditprofile');
 Route::put('/profile/{id}', 'ProfileController@update');
 
 Route::delete('/profile/{id}', 'ProfileController@destroy');
@@ -95,9 +95,15 @@ Route::post('/santri/import_excel', 'SantriController@import_excel');
 
 Route::get('/santri/create', 'SantriController@create');
 Route::post('/santri', 'SantriController@store');
-
+Route::get('/santri/{id}', 'SantriController@show')->name('linksantri');
+Route::get('/santri/{id}', 'SantriController@edit')->name('ngeditsantri');
+Route::put('/santri/{id}'. 'SantriController@update');
+Route::delete('santri/{id}', 'SantriController@destroy');
 //dashboard
 
 Route::get('/dashboard/home', 'AdminController@index');
+Route::get('/dashboard/organisasi', 'AdminController@organisasi');
 Route::get('/dashboard/artikel', 'AdminController@artikel');
 Route::get('/dashboard/santri', 'AdminController@santri');
+Route::get('/dashboard/uks', 'AdminController@uks');
+Route::get('/dashboard/profile', 'AdminController@profile');

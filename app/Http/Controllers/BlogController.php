@@ -18,14 +18,14 @@ class BlogController extends Controller
 
       return view ('blog/home')->with('artikels', $artikels);
     }
-    
+
 
     public function dasboard()
     {
          $artikels = Artikel::all();
 
 
-      return view ('blog/dasboard')->with('artikels', $artikels);
+      return view ('blog/dashoard')->with('artikels', $artikels);
     }
 
 
@@ -65,7 +65,7 @@ class BlogController extends Controller
       $artikel->save();
 
 
-      return redirect('blog/dasboard');
+      return redirect('dashboard/artikel');
     }
 
 
@@ -99,6 +99,6 @@ class BlogController extends Controller
     {
        $artikel= Artikel::find($id);
        $artikel->delete();
-       return redirect('blog');
+       return redirect('dashboard/artikel');
     }
 }

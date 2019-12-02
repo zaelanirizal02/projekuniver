@@ -24,7 +24,7 @@
 
 
 
-   <a href="{{ route('link', $artikel->id) }}" style="width:300px; height: 300px;border:1px solid black;float:left;margin:20px">
+   <a href="{{ route('linkartikel', $artikel->id) }}" style="width:300px; height: 300px;border:1px solid black;float:left;margin:20px">
 
      <img src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:100%; height:100%">
      <div class=""style="margin">

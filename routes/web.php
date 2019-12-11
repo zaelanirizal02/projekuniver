@@ -41,6 +41,9 @@ Route::get('/blogUser', 'BlogUserController@index');
 Route::get('/{id}', 'BlogController@show')->name('link');
 
 
+//akun
+Route::get('/auth/register','RegisterController@create');
+
 //organisasi
 Route::get('/organisasi/home', 'OrganisasiController@index');
 
@@ -89,6 +92,8 @@ Route::delete('/uks/{id}', 'UksController@destroy');
 
 
 //Santri
+
+
 Route::get('/santri/home', 'SantriController@index');
 Route::get('/santri/export_excel', 'SantriController@export_excel');
 Route::post('/santri/import_excel', 'SantriController@import_excel');
@@ -99,6 +104,8 @@ Route::get('/santri/{id}', 'SantriController@show')->name('linksantri');
 Route::get('/santri/{id}', 'SantriController@edit')->name('ngeditsantri');
 Route::put('/santri/{id}'. 'SantriController@update');
 Route::delete('santri/{id}', 'SantriController@destroy');
+
+
 //dashboard
 
 Route::get('/dashboard/home', 'AdminController@index');

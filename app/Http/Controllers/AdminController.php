@@ -26,7 +26,7 @@ class AdminController extends Controller
 
       $artikels = Artikel::all();
 
-      return view ('blog.dashboard',['artikels'=>$artikels]);
+      return view ('admin.artikel',['artikels'=>$artikels]);
     }
 
     public function organisasi()
@@ -40,7 +40,7 @@ class AdminController extends Controller
     public function santri()
     {
       $santris = Santri::all();
-      return view ('santri.dashboard',['santris'=>$santris]);
+      return view ('admin.santri',['santris'=>$santris]);
     }
 
     public function uks()
@@ -55,5 +55,9 @@ class AdminController extends Controller
       return view ('admin.profile',['profiles'=>$profiles]);
     }
 
+    public function register()
+    {
+      return view ('auth.register');
+    }
 
 }

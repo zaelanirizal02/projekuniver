@@ -6,7 +6,7 @@ Universal | Data Artikel
 
 @section('content')
 <div class="container"style="padding-top:100px">
-  <h1 class="text-center">Daftar Organisasi PMMU</h1
+  <h1 class="display-5 text-center font-weight-bold">Daftar Organisasi</h1>
   <hr>
 
   <a href="/organisasi/create" class="btn btn-info">Create</a>

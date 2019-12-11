@@ -23,7 +23,7 @@
     </div> -->
     <div class="card-body">
       <div class="container"style="padding-top:px">
-  <h1 class="display-4 text-center pt-1 font-weight-bold">DATA UKS PPMU</h1>
+  <h1 class="display-5 text-center pt-1 font-weight-bold">DATA UKS PPMU</h1>
         <hr>
 
         <a href="/uks/create" class="btn btn-info">Create</a>

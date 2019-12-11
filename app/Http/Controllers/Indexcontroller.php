@@ -14,8 +14,9 @@ class Indexcontroller extends Controller
     public function index()
     {
       $artikels = Artikel::orderBy('created_at', 'desc')->limit(4)->get();
+      $ukss= Uks::all();
 
-      return view ('home')->with('artikels', $artikels);
+      return view ('home')->with('artikels', $artikels)->with('ukss',$ukss);
     }
 
     public function show ($id)

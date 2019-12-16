@@ -236,6 +236,18 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item has-treeview">
+            <a href="/dashboard/banner" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Ganti Banner Depan
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a href="../gallery.html" class="nav-link">
               <i class="nav-icon far fa-image"></i>

@@ -105,6 +105,19 @@ Route::get('/santri/{id}', 'SantriController@edit')->name('ngeditsantri');
 Route::put('/santri/{id}'. 'SantriController@update');
 Route::delete('santri/{id}', 'SantriController@destroy');
 
+//BANNER
+Route::get('/banner/create','BannerController@create');
+Route::post('/banner', 'BannerController@store');
+Route::get('/banner/dashboard', 'BannerController@dashboard');
+
+Route::get('/banner/{id}', 'BannerController@show')->name('linkbanner');
+
+Route::get('/banner/{id}/edit', 'BannerController@edit')->name('ngeditbanner');
+
+Route::put('/banner/{id}', 'BannerController@update');
+
+Route::delete('/banner/{id}', 'BannerController@destroy');
+
 
 //dashboard
 
@@ -114,3 +127,4 @@ Route::get('/dashboard/artikel', 'AdminController@artikel');
 Route::get('/dashboard/santri', 'AdminController@santri');
 Route::get('/dashboard/uks', 'AdminController@uks');
 Route::get('/dashboard/profile', 'AdminController@profile');
+Route::get('/dashboard/banner', 'AdminController@banner');

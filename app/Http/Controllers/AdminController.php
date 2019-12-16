@@ -11,6 +11,7 @@ use Laravel\User;
 use Laravel\Santri;
 use Laravel\Uks;
 use Laravel\Profile;
+use Laravel\Banner;
 class AdminController extends Controller
 {
     public function index()
@@ -53,6 +54,12 @@ class AdminController extends Controller
     {
       $profiles = profile::all();
       return view ('admin.profile',['profiles'=>$profiles]);
+    }
+
+    public function banner()
+    {
+      $banners = banner::all();
+      return view ('admin.banner',['banners'=>$banners]);
     }
 
     public function register()

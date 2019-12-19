@@ -25,7 +25,8 @@ class HomeController extends Controller
     public function index()
     {
       $artikels = Artikel::all();
+      $banners = Banner::all();
 
-      return view ('home')->with('artikels', $artikels);
+      return view ('home')->with('artikels', $artikels)->with('banners',$banners);
     }
 }

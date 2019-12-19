@@ -13,11 +13,12 @@ class Banner extends Migration
      */
     public function up()
     {
-        Schema::create('banners', function ($table){
-            $table->bigIncrements('id');
-            $table->String('nama');
-            $table->String('gambar');
-        });
+      Schema::create('banner', function (Blueprint $table) {
+        $table->bigIncrements('id');
+        $table->string('nama_banner');
+        $table->string('gambar_banner');
+        $table->timestamps();
+      });
     }
 
     /**

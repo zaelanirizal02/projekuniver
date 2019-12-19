@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Laravel\Artikel;
 use Laravel\User;
 
+
 class BlogController extends Controller
 {
     public function index()

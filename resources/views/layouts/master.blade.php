@@ -40,8 +40,9 @@
 
   <div class="container-fluid text-center">
   <br>
-  <h1>Disini templat leaflet</h1>
-  <br>
+  @foreach($banners as $i => $banner)
+  <img src="img_banner/{{$banner->gambar_banner}}" class="mx-auto d-block pb-1" alt="Cinque Terre"  height="100px" width="80%">
+@endforeach
   </div>
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top font-weight-bold" style="background:#027cd9">
       <div class="container">

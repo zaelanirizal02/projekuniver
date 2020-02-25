@@ -68,10 +68,10 @@
           </li>
 
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder=". . . . ." aria-label="Search">
           <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
 
       @if(Auth::user())
@@ -111,7 +111,7 @@
 
   <!-- Footer -->
 
-  <section id="footer" class="footer">
+  <!-- <section id="footer" class="footer">
     <div class="jumbotron-fluid bg-primary text-light" >
       <div class="container text-center">
         <div class="footer-copyright text-center py-1">© 2019 Copyright :
@@ -119,7 +119,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </body>
 
 

@@ -4,50 +4,78 @@
 
 
 @section('content')
-<div class="container">
-  <div class="accordion" id="accordionExample">
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="col pt-4 pb-2">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="my-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Dewan Pengasuh
-                </button>
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="col py-2">
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="my-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Dewan Santri
-                </button>
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-9">
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body">
+<style>
+#satu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+</style>
+<section id="satu" style="padding-top:50px">
+  <img src="/img/header2.png" class="d-block w-100" alt="img-responsive"  width="50%">
+</section>
 
-          </div>
-        </div>
-        <div class="col-sm">
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="card-body">
-              akjdakjkajdadkjkl jnkn
+<div class="container py-5">
+  <div class="card">
+  <div class="jumbotron-fluid py-2" style="background-color:white">
+    <img src="/img/header3.png" class="d-block w-100 px-2" alt="img-responsive"  width="50%">
+  </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="row pt-1">
+        <div class="col-sm-3">
+          {{! $i = 1 }}
+          @foreach($profiles as $profile)
+          <div class="col pb-2 ">
+            <div class="card text-center" id="headingOne" style="margin-top:2px;margin-bottom:2px;background-color:#f7f7f7">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{$i}}" aria-expanded="true" aria-controls="collapseOne">
+                    {{$profile->nama_profile}}
+                  </button>
             </div>
           </div>
+          {{! $i++ }}
+          @endforeach
+        </div>
+
+        <div class="col-sm-9">
+          {{! $i = 1 }}
+          @foreach($profiles as $profile)
+          <div id="collapse{{$i}}" class="collapse {{ 1==$i ? 'show' : '' }}" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="col pr-3">
+              <div class="card-header text-center">
+                    <h1 class="text-uppercase font-weight-bold">{{$profile->nama_profile}}</h1>
+                <div class="card-body">
+                  <div class="text-center mx-2 pb-4">
+                    <img src="/img_profile/{{$profile->gambar_profile}}" alt="" width="90%">
+                  </div>
+
+                  <div class="text py-4 mx-2" style="border-box">
+                        <h6>{{$profile->isi_profile}}</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{! $i++ }}
+          @endforeach
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+<section id="footer" class="footer">
+  <div class="jumbotron-fluid text-light" style="background:#1B2626" >
+    <div class="container text-center">
+      <div class="footer-copyright text-center py-1">© 2019 Copyright :
+        <a > PPMU </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

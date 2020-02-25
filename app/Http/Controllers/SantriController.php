@@ -56,7 +56,7 @@ class SantriController extends Controller
 		Session::flash('sukses','Data Santri Berhasil Diimport!');
 
 		// alihkan halaman kembali
-		return redirect('/santri/home');
+		return redirect('dashboard  /santri');
   	 }
 
 

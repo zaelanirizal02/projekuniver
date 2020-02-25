@@ -40,6 +40,7 @@
 
   <div class="container-fluid text-center">
   <br>
+  {{! $banners=\Laravel\Banner::all()}}
   @foreach($banners as $i => $banner)
   <img src="img_banner/{{$banner->gambar_banner}}" class="mx-auto d-block pb-1" alt="Cinque Terre"  height="100px" width="80%">
 @endforeach

@@ -12,6 +12,7 @@ use Laravel\Santri;
 use Laravel\Uks;
 use Laravel\Profile;
 use Laravel\Banner;
+use Laravel\Galeri;
 class AdminController extends Controller
 {
     public function index()
@@ -27,7 +28,12 @@ class AdminController extends Controller
 
       $artikels = Artikel::all();
 
-      return view ('admin.artikel',['artikels'=>$artikels]);
+      $jenis_artikel = DB::table('artikels')
+                        ->select(DB::raw('count(*) as artikel_count, jenis_artikel'))
+                        ->groupBy('jenis_artikel')
+                        ->get();
+
+      return view ('admin.artikel',['artikels'=>$artikels, 'jenis_artikel'=>$jenis_artikel]);
     }
 
     public function organisasi()
@@ -65,6 +71,12 @@ class AdminController extends Controller
     public function register()
     {
       return view ('auth.register');
+    }
+
+    public function galeri()
+    {
+      $galeris = galeri::all();
+      return view ('admin.galeri',['galeris'=>$galeris]);
     }
 
 }

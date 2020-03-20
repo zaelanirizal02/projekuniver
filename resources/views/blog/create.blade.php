@@ -5,7 +5,7 @@
 @section('content')
 
 
-<div class="" style="padding-top:100px">
+<div class="" style="padding-top:50px">
 
 
 <h1 class="text-center">BUAT ARTIKEL</h1>
@@ -20,7 +20,15 @@
 
     <div class="form-group">
     <label for="jenis_artikel">Jenis Artikel :</label>
-    <input type="text" class="form-control" name="jenis_artikel"id="jenis_artikel">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <select class="form-control" name="jenis_artikel"id="jenis_artikel">
+        <option value="Artikel">Artikel</option>
+        <option value="Berita">Berita</option>
+        </select>
+      </div>
+    </div>
   </div>
 
     <div class="form-group">

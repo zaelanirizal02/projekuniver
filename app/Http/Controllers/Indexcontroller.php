@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use Laravel\Artikel;
+use Laravel\Banner;
 use Laravel\Uks;
 
 class Indexcontroller extends Controller
@@ -15,8 +16,9 @@ class Indexcontroller extends Controller
     {
       $artikels = Artikel::orderBy('created_at', 'desc')->limit(4)->get();
       $ukss= Uks::all();
+      $banners= Banner::all();
 
-      return view ('home')->with('artikels', $artikels)->with('ukss',$ukss);
+      return view ('home')->with('artikels', $artikels)->with('ukss',$ukss)->with('banners',$banners);
     }
 
     public function show ($id)

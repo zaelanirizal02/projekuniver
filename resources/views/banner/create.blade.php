@@ -10,7 +10,7 @@
 
 <h1 class="text-center">MASUKAN BANNER</h1>
 <div class="container" style=" width: 500px; height:300px">
-<form action="/blog" method="post" enctype="multipart/form-data" style="padding:10px; border:1px solid black">
+<form action="/banner" method="post" enctype="multipart/form-data" style="padding:10px; border:1px solid black">
 
 
   <div class="form-group">

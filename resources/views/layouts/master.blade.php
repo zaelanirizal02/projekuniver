@@ -41,7 +41,7 @@ body{
 </head>
 
 <body class="data-spy=" scroll" data-target=".navbar" data-offset="50"">
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top font-weight-bold" style="background:#3282B8">
+
       <div class="container">
       <a class="navbar-brand" href="/">BERANDA</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,15 +107,7 @@ body{
 
   <!-- Footer -->
 
-  <!-- <section id="footer" class="footer">
-    <div class="jumbotron-fluid bg-primary text-light" >
-      <div class="container text-center">
-        <div class="footer-copyright text-center py-1">© 2019 Copyright :
-          <a > PPMU </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
+
 </body>
 
 

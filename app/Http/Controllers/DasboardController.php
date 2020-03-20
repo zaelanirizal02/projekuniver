@@ -3,20 +3,12 @@
 namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class DasboardController extends Controller
-{
-    <?php
-
-namespace Laravel\Http\Controllers;
-
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use Laravel\Artikel;
 use Laravel\User;
 
-class BlogController extends Controller
+class DasboardController extends Controller
 {
     public function index()
     {
@@ -98,6 +90,15 @@ class BlogController extends Controller
        $artikel->delete();
        return redirect('dasboard');
     }
-}
 
+    public function cari(Request $request)
+    {
+      $cari=$request->cari;
+
+      $artikel= DB::table("artikel")
+      ->where('artikel_nama','like',"%".$cari."%")
+      ->paginate();
+
+      return view('index',['artikel'=>$artikel]);
+    }
 }

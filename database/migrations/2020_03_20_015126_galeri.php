@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Banner extends Migration
+class Galeri extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class Banner extends Migration
      */
     public function up()
     {
-        Schema::create('banners', function ($table){
-            $table->bigIncrements('id');
-            $table->String('nama');
-            $table->String('gambar');
+        Schema::create('galeri', function (Blueprint $table) {
+          $table->bigIncrements('id');
+          $table->string('nama_galeri');
+          $table->string('gambar_galeri');
+          $table->string('jenis_galeri');
+          $table->string('keterangan_galeri');
+          $table->timestamps();
         });
-    }
+      }
 
     /**
      * Reverse the migrations.

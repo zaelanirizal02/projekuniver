@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Laravel\Artikel;
 use Laravel\User;
 
+
 class BlogController extends Controller
 {
     public function index()
@@ -100,5 +101,16 @@ class BlogController extends Controller
        $artikel= Artikel::find($id);
        $artikel->delete();
        return redirect('dashboard/artikel');
+    }
+
+    public function cari(Request $request)
+    {
+      $cari=$request->cari;
+
+      $artikels= DB::table("artikel")
+      ->where('nama_artikel','like',"%".$cari."%")
+      ->paginate();
+
+      return view ('blog/dashoard')->with('artikels', $artikels);
     }
 }

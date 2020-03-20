@@ -102,4 +102,15 @@ class BlogController extends Controller
        $artikel->delete();
        return redirect('dashboard/artikel');
     }
+
+    public function cari(Request $request)
+    {
+      $cari=$request->cari;
+
+      $artikels= DB::table("artikel")
+      ->where('nama_artikel','like',"%".$cari."%")
+      ->paginate();
+
+      return view ('blog/dashoard')->with('artikels', $artikels);
+    }
 }

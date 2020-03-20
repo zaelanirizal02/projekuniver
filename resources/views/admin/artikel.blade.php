@@ -18,13 +18,27 @@ Universal | Data Artikel
         <hr>
 
         <a href="/blog/create" class="btn btn-info">Create</a>
+        <p>Cari Berdasarkan Jenis :</p>
+<form action="/artikel/cari" method="GET">
+  <input type="text" name="cari" placeholder="urutkan jenis artikel .." value="{{ old('cari') }}">
+  <input type="submit" value="CARI">
+</form>
+
+<div class="form-group">
+  <label for="sel1">Select list:</label>
+  <select class="form-control" id="sel1">
+  @foreach ($jenis_artikel as $jenis)
+    <option value="">{{$jenis->jenis_artikel}}</option>
+  @endforeach
+  </select>
+</div> 
 
         <table class="table table-striped table-bordered">
         <thead class="warning">
           <tr>
             <th>Nama</th>
             <th>Nama</th>
-            <th>Jenis</th>
+            <th >Jenis Artikel</th>
             <th>Gambar</th>
             <th>action</th>
           </tr>

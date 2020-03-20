@@ -90,6 +90,15 @@ class DasboardController extends Controller
        $artikel->delete();
        return redirect('dasboard');
     }
-}
 
+    public function cari(Request $request)
+    {
+      $cari=$request->cari;
+
+      $artikel= DB::table("artikel")
+      ->where('artikel_nama','like',"%".$cari."%")
+      ->paginate();
+
+      return view('index',['artikel'=>$artikel]);
+    }
 }

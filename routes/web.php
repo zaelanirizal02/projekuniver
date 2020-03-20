@@ -62,17 +62,20 @@ Route::delete('/organisasi/{id}', 'OrganisasiController@destroy');
 
 
 //profile
-Route::get('/profile/home', 'ProfileController@index');
 
-Route::get('/profile/create', 'ProfileController@create');
-Route::post('/profile', 'ProfileController@store');
+Route::group(['prefix' => 'profile','middleware' => 'auth'], function (){
+Route::get('/home', 'ProfileController@index');
 
-Route::get('/profile/{id}', 'ProfileController@show')->name('linkprofile');
+Route::get('/create', 'ProfileController@create');
+Route::post('', 'ProfileController@store');
 
-Route::get('/profile/{id}/edit', 'ProfileController@edit')->name('ngeditprofile');
-Route::put('/profile/{id}', 'ProfileController@update');
+Route::get('/{id}', 'ProfileController@show')->name('linkprofile');
 
-Route::delete('/profile/{id}', 'ProfileController@destroy');
+Route::get('/{id}/edit', 'ProfileController@edit')->name('ngeditprofile');
+Route::put('/{id}', 'ProfileController@update');
+
+Route::delete('/{id}', 'ProfileController@destroy');
+});
 
 
 //uks
@@ -93,7 +96,6 @@ Route::delete('/uks/{id}', 'UksController@destroy');
 
 //Santri
 
-
 Route::get('/santri/home', 'SantriController@index');
 Route::get('/santri/export_excel', 'SantriController@export_excel');
 Route::post('/santri/import_excel', 'SantriController@import_excel');
@@ -105,17 +107,14 @@ Route::get('/santri/{id}', 'SantriController@edit')->name('ngeditsantri');
 Route::put('/santri/{id}'. 'SantriController@update');
 Route::delete('santri/{id}', 'SantriController@destroy');
 
+
 //BANNER
 Route::get('/banner/create','BannerController@create');
 Route::post('/banner', 'BannerController@store');
 Route::get('/banner/dashboard', 'BannerController@dashboard');
-
 Route::get('/banner/{id}', 'BannerController@show')->name('linkbanner');
-
 Route::get('/banner/{id}/edit', 'BannerController@edit')->name('ngeditbanner');
-
 Route::put('/banner/{id}', 'BannerController@update');
-
 Route::delete('/banner/{id}', 'BannerController@destroy');
 
 
@@ -128,3 +127,13 @@ Route::get('/dashboard/santri', 'AdminController@santri');
 Route::get('/dashboard/uks', 'AdminController@uks');
 Route::get('/dashboard/profile', 'AdminController@profile');
 Route::get('/dashboard/banner', 'AdminController@banner');
+Route::get('/dashboard/galeri','AdminController@galeri');
+
+//Galery
+Route::get('/galeri/create','GaleriController@create');
+Route::post('/galeri', 'GaleriController@store');
+Route::get('/galeri/dashboard', 'GaleriController@dashboard');
+Route::get('/galeri/{id}', 'GaleriController@show')->name('linkgaleri');
+Route::get('/galeri/{id}/edit', 'GaleriController@edit')->name('ngeditgaleri');
+Route::put('/galeri/{id}', 'GaleriController@update');
+Route::delete('/galeri/{id}', 'GaleriController@destroy');

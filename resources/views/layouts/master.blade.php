@@ -42,7 +42,7 @@
   <br>
   {{! $banners=\Laravel\Banner::all()}}
   @foreach($banners as $i => $banner)
-  <img src="img_banner/{{$banner->gambar_banner}}" class="mx-auto d-block pb-1" alt="Cinque Terre"  height="100px" width="80%">
+  <img src="img_banner/{{$banner->gambar_banner}}" class="mx-auto d-block pb-1" alt="banner"  height="100px" width="80%">
 @endforeach
   </div>
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top font-weight-bold" style="background:#027cd9">
@@ -111,15 +111,7 @@
 
   <!-- Footer -->
 
-  <section id="footer" class="footer">
-    <div class="jumbotron-fluid bg-primary text-light" >
-      <div class="container text-center">
-        <div class="footer-copyright text-center py-1">© 2019 Copyright :
-          <a > PPMU </a>
-        </div>
-      </div>
-    </div>
-  </section>
+ke
 </body>
 
 

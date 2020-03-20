@@ -55,7 +55,7 @@ class BlogController extends Controller
     {
       $galeri = new Galeri;
       $galeri->nama_galeri = $req->nama_galeri;
-      $galeri->isi_galeri = $req->isi_galeri;
+      $galeri->keterangan_galeri = $req->keterangan_galeri;
       $galeri->jenis_galeri = $req->jenis_galeri;
       $file    = $req->file('gambar_galeri');
       $ext     = $file->getClientOriginalExtension();

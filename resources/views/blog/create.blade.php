@@ -5,7 +5,7 @@
 @section('content')
 
 
-<div class="" style="padding-top:100px">
+<div class="" style="padding-top:50px">
 
 
 <h1 class="text-center">BUAT ARTIKEL</h1>

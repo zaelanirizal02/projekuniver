@@ -4,9 +4,7 @@ namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
-use Laravel\Artikel;
-use Laravel\User;
+use Laravel\Banner;
 
 
 class BannerController extends Controller

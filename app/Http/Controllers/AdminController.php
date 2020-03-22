@@ -23,10 +23,15 @@ class AdminController extends Controller
       return view ('admin.home', compact('artikels','organisasis'));
     }
 
-    public function artikel()
+    public function artikel(Request $req)
     {
-
       $artikels = Artikel::all();
+      
+      $query = $req->get('query');
+
+      if (!is_null($query)) {
+        $artikels = Artikel::where('nama_artikel', 'like', '%'.$query.'%')->get();
+      }
 
       $jenis_artikel = DB::table('artikels')
                         ->select(DB::raw('count(*) as artikel_count, jenis_artikel'))

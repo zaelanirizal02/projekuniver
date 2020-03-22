@@ -50,7 +50,7 @@ class OrganisasiController extends Controller
 
 
     public function store(Request $req)
-    {$GLOBALS['variable'] = something;
+    {
       $organisasi = new Organisasi;
       $organisasi->jenis_organisasi = $req->jenis_organisasi;
       $organisasi->isi_organisasi = $req->isi_organisasi;

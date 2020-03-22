@@ -19,8 +19,8 @@ Universal | Data Artikel
 
         <a href="/blog/create" class="btn btn-info">Create</a>
         <p>Cari Berdasarkan Jenis :</p>
-<form action="/artikel/cari" method="GET">
-  <input type="text" name="cari" placeholder="urutkan jenis artikel .." value="{{ old('cari') }}">
+<form action="/dashboard/artikel" method="GET">
+  <input type="text" name="query" placeholder="cari artikel .." value="{{ old('cari') }}">
   <input type="submit" value="CARI">
 </form>
 

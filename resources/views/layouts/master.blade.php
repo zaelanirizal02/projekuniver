@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+body{
+	background-color:#fff;
+}
+
 .column {
   float: left;
   width: 33.33%;
@@ -37,16 +41,6 @@
 </head>
 
 <body class="data-spy=" scroll" data-target=".navbar" data-offset="50"">
-
-  <div class="container-fluid text-center">
-  <br>
-  {{! $banners=\Laravel\Banner::all()}}
-  @foreach($banners as $i => $banner)
-  
-@endforeach
-<img src="img_banner/{{$banner->gambar_banner}}" class="mx-auto d-block pb-1" alt="banner"  height="100px" width="80%">
-  </div>
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top font-weight-bold" style="background:#027cd9">
       <div class="container">
       <a class="navbar-brand" href="/">BERANDA</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,13 +59,13 @@
             <a class="nav-link" href="/uks/home">UKS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/blog ">Artikel</a>
+            <a class="nav-link" href="/blog ">ARTIKEL</a>
           </li>
 
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-sm-0">
           <input class="form-control mr-sm-2" type="search" placeholder=". . . . ." aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-light my-sm-0" type="submit">Search</button>
         </form>
       </div>
 
@@ -112,7 +106,7 @@
 
   <!-- Footer -->
 
-ke
+
 </body>
 
 

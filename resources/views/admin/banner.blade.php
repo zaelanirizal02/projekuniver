@@ -37,7 +37,7 @@ Universal | Ganti Banner
             </td>
             <td>  <div class="container text-center">
               
-                 <a href="{{ route('link', $banner->id) }}" style="width:200px; height:200px;border:1px transparent black;float:left;margin:20px">
+                 <a href="{{ route('linkbanner', $banner->id) }}" style="width:200px; height:200px;border:1px transparent black;float:left;margin:20px">
                    <img src="img_banner/{{$banner->gambar_banner}}" alt="" style="width:200px; height:200px">
                    <div class=""style="margin">
                    </div>

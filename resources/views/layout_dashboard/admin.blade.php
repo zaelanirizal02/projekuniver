@@ -207,6 +207,16 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="/dashboard/kegiatan" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Kegiatan
+                <i class="right fas fa-angle-left"></i>
+                {{-- <span class="badge badge-info right">{{count(\Laravel\Kegiatan::all())}}</span> --}}
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="/dashboard/santri" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>

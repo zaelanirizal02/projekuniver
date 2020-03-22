@@ -42,8 +42,9 @@
   <br>
   {{! $banners=\Laravel\Banner::all()}}
   @foreach($banners as $i => $banner)
-  <img src="img_banner/{{$banner->gambar_banner}}" class="mx-auto d-block pb-1" alt="banner"  height="100px" width="80%">
+  
 @endforeach
+<img src="img_banner/{{$banner->gambar_banner}}" class="mx-auto d-block pb-1" alt="banner"  height="100px" width="80%">
   </div>
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top font-weight-bold" style="background:#027cd9">
       <div class="container">

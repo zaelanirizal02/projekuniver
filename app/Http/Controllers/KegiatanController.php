@@ -17,7 +17,7 @@ class BlogController extends Controller
       $kegiatans = Kegiatan::all();
 
 
-      return view ('blog/home')->with('kegiatans', $kegiatans);
+      return view ('kegiatan/home')->with('kegiatans', $kegiatans);
     }
 
 

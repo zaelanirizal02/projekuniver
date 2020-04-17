@@ -102,7 +102,7 @@
 
                 @foreach($ukss as $uks)
                 <div class="text py-3 my-2 mx-2" style="border-box">
-                      <a href="{{ route('link', $uks->id) }}">{{$uks->nama_uks}}</a> 
+                      <a href="{{ route('link', $uks->id) }}">{{$uks->nama_uks}}</a>
                 </div>
                 @endforeach
 

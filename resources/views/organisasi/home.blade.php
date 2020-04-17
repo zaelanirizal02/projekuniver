@@ -84,7 +84,7 @@
   </div>
 </div>
 
-<section id="footer" class="footer">
+<!-- <section id="footer" class="footer">
   <div class="jumbotron-fluid text-light" style="background:#1B2626" >
     <div class="container text-center">
       <div class="footer-copyright text-center py-1">© 2019 Copyright :
@@ -92,7 +92,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Laravel\Galeri;
 use Laravel\User;
 
-class BlogController extends Controller
+class GaleriController extends Controller
 {
     public function index()
     {
@@ -25,7 +25,7 @@ class BlogController extends Controller
          $galeris = Galeri::all();
 
 
-      return view ('galeri/dashoard')->with('galeris', $galeris);
+      return view ('galeri/home')->with('galeris', $galeris);
     }
 
 

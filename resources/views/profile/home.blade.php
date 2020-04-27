@@ -19,7 +19,7 @@
 <div class="container py-5">
   <div class="card">
   <div class="jumbotron-fluid py-2" style="background-color:white">
-    <img src="/img/header3.png" class="d-block w-100 px-2" alt="img-responsive"  width="50%">
+    <img src="/img/profilehome.png" class="d-block w-100" alt="img-responsive" width="50%">
     <div class="container text-black text-center">
   </div>
   </div>
@@ -95,72 +95,115 @@
         </div>
         <div class="col-sm">
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            @foreach($visimisis as $i => $profile)
             <div class="col py-4 pr-3">
               <div class="card-header text-center">
-                    Visi Misi
+                    {{$profile->nama_profile}}
                 <div class="card-body">
                   <div class="text-center mx-2">
                     <img src="/img/Slider/Slider2.jpg" alt="" width="50%">
                   </div>
                   <div class="text py-3 my-2 mx-2" style="border-box">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    {!!$profile->isi_profile!!}
                   </div>
                 </div>
               </div>
             </div>
+            @endforeach
           </div>
         </div>
         <div class="col-sm">
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            @foreach($dasarhukums as $i => $profile)
             <div class="col py-4 pr-3">
               <div class="card-header text-center">
-                    Dasar Hukum
+                    {{$profile->nama_profile}}
                 <div class="card-body">
                   <div class="text-center mx-2">
-                    <img src="/img/Slider/Slider3.jpg" alt="" width="50%">
+                    <img src="/img_profile/{{$profile->gambar_profile}}" alt="" width="50%">
                   </div>
                   <div class="text py-3 my-2 mx-2" style="border-box">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    {!!$profile->isi_profile!!}
                   </div>
                 </div>
               </div>
             </div>
+            @endforeach
           </div>
         </div>
         <div class="col-sm">
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-            <div class="card-body">
-              44444444444444444444444444444444444444444444444444444444444444444444444444
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            @foreach($kurikulums as $i => $profile)
+            <div class="col py-4 pr-3">
+              <div class="card-header text-center">
+                    {{$profile->nama_profile}}
+                <div class="card-body">
+                  <div class="text-center mx-2">
+                    <img src="/img_profile/{{$profile->gambar_profile}}" alt="" width="50%">
+                  </div>
+                  <div class="text py-3 my-2 mx-2" style="border-box">
+                    {!!$profile->isi_profile!!}
+                  </div>
+                </div>
+              </div>
             </div>
+            @endforeach
           </div>
         </div>
         <div class="col-sm">
-          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-            <div class="card-body">
-              55555555555555555555555555555555555555555555555555555555555555555555555555
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            @foreach($sistempenilaians as $i => $profile)
+            <div class="col py-4 pr-3">
+              <div class="card-header text-center">
+                    {{$profile->nama_profile}}
+                <div class="card-body">
+                  <div class="text-center mx-2">
+                    <img src="/img_profile/{{$profile->gambar_profile}}" alt="" width="50%">
+                  </div>
+                  <div class="text py-3 my-2 mx-2" style="border-box">
+                    {!!$profile->isi_profile!!}
+                  </div>
+                </div>
+              </div>
             </div>
+            @endforeach
           </div>
         </div>
         <div class="col-sm">
           <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-            <div class="card-body">
-              6666666666666666666666666666666666666666666666666666666666666666666666666
+            @foreach($tradisis as $i => $profile)
+          <div class="col py-4 pr-3">
+              <div class="card-header text-center">
+                    {{$profile->nama_profile}}
+                <div class="card-body">
+                  <div class="text-center mx-2">
+                    <img src="/img_profile/{{$profile->gambar_profile}}" alt="" width="50%">
+                  </div>
+                  <div class="text py-3 my-2 mx-2" style="border-box">
+                    {!!$profile->isi_profile!!}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          @endforeach
         </div>
         <div class="col-sm">
-          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-            <div class="card-body">
-              777777777777777777777777777777777777777777777777777777777777777777777777
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            @foreach($fasilitass as $i => $profile)
+            <div class="col py-4 pr-3">
+              <div class="card-header text-center">
+                    {{$profile->nama_profile}}
+                <div class="card-body">
+                  <div class="text-center mx-2">
+                    <img src="/img_profile/{{$profile->gambar_profile}}" alt="" width="50%">
+                  </div>
+                  <div class="text py-3 my-2 mx-2" style="border-box">
+                    {!!$profile->isi_profile!!}
+                  </div>
+                </div>
+              </div>
             </div>
+            @endforeach
           </div>
         </div>
       </div>

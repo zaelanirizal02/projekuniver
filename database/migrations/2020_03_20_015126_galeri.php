@@ -13,7 +13,7 @@ class Galeri extends Migration
      */
     public function up()
     {
-        Schema::create('galeri', function (Blueprint $table) {
+        Schema::create('galeris', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->string('nama_galeri');
           $table->string('gambar_galeri');

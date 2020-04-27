@@ -95,24 +95,25 @@ section {cara menampilkan artikel dari databa
 
 <!-- Page 1 -->
 <section>
-  <div class="jumbotron-fluid" style="background:#3282B8" alt="img-responsive">
+  <div class="jumbotron-fluid" style="background:#094f1b" alt="img-responsive">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner justify-content-center " style="background:">
           @foreach($artikels as $i => $artikel)
           <div class="carousel-item @if($i == 0) {{ 'active' }} @endif ">
-            <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block img-fluid" alt="Responsive image"  height="1080px" width="1920px"></a>
+            <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block img-fluid" alt="Responsive image" style="height:50%; width:100%; margin:10px"></a>
             <!-- <p class="carousel-caption text-center font-weight-bold bg-dark" style="opacity: 0.8; font-size:25px">{{ str_limit($artikel->nama_artikel, 50)}}</p> -->
           </div>
           @endforeach
         </div>
         <div class="container">
           <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true" style=""></span>
             <span class="sr-only">Previous</span>
           </a>
           <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
@@ -154,7 +155,7 @@ section {cara menampilkan artikel dari databa
             <div id="menuBerita" class="container tab-pane active"><br>
               <div class="card rounded my-3" style="max-width: 500px;">
                 <div class="container">
-                  @foreach($artikels as $i => $artikel)
+                  @foreach($beritas as $i => $artikel)
                   <div class="row py-2">
                     <div class="col-md-4 text-center">
                       <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
@@ -166,7 +167,7 @@ section {cara menampilkan artikel dari databa
                           Disini di isi waktu
                         </div> -->
                         <div class="card-body">
-                          <p class="card-text text-left text-dark justify-content-center" style="font-size:15px">{{ str_limit($artikel->isi_artikel, 30)}}</p>
+                          <p class="card-text text-left text-dark justify-content-center" style="font-size:15px">{!! str_limit($artikel->isi_artikel, 20)!!}</p>
                         </div>
                       </div>
                     </div>
@@ -179,7 +180,7 @@ section {cara menampilkan artikel dari databa
             <div id="menuArtikel" class="container tab-pane fade"><br>
               <div class="card rounded my-3" style="max-width: 500px;">
                 <div class="container">
-                  @foreach($artikels as $i => $artikel)
+                  @foreach($artikels2 as $i => $artikel)
                   <div class="row py-2">
                     <div class="col-md-4 text-center">
                       <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
@@ -191,7 +192,7 @@ section {cara menampilkan artikel dari databa
                           Disini di isi waktu
                         </div> -->
                         <div class="card-body">
-                          <p class="card-text text-left text-dark justify-content-center" style="font-size:15px">{{ str_limit($artikel->isi_artikel, 30)}}</p>
+                          <p class="card-text text-left text-dark justify-content-center" style="font-size:15px">{!! str_limit($artikel->isi_artikel, 20)!!}</p>
                         </div>
                       </div>
                     </div>

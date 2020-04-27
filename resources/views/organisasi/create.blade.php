@@ -26,7 +26,7 @@
 
     <div class="form-group">
     <label for="isi_organisasi">Isi organisasi :</label>
-    <textarea name="isi_organisasi" rows="5" cols="45"></textarea>
+    <textarea class="ckeditor" id="isi_organisasi" name="isi_organisasi" rows="5" cols="45"></textarea>
   </div>
 
         <button type="submit" class="btn btn-primary" style="border: 2px">Create</button>

@@ -15,9 +15,12 @@ class BlogController extends Controller
     {
 
       $artikels = Artikel::all();
+      $beritas= Artikel::where('jenis_artikel','=', 'berita')->get();
+      $artikels2= Artikel::where('jenis_artikel','=', 'artikel')->get();
 
 
-      return view ('blog/home')->with('artikels', $artikels);
+
+      return view ('blog/home')->with('artikels', $artikels)->with('beritas',$beritas)->with('artikels2' , $artikels2);
     }
 
 
@@ -92,7 +95,7 @@ class BlogController extends Controller
         'gambar_artikel' => $req->gambar_artikel,
       ]);
 
-      return redirect()->back();
+      return redirect('dashboard/artikel');
     }
 
 

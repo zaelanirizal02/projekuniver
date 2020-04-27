@@ -9,18 +9,7 @@
 
 <!-- Main content -->
 <section class="content">
-
-  <!-- Default box -->
   <div class="card">
-    <!-- <div class="card-header">
-
-      <div class="card-tools">
-        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-          <i class="fas fa-minus"></i></button>
-        <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-          <i class="fas fa-times"></i></button>
-      </div>
-    </div> -->
     <div class="card-body">
       <div class="container"style="padding-top:px">
   <h1 class="display-5 text-center pt-1 font-weight-bold">DATA PROFILE PPMU</h1>
@@ -33,6 +22,7 @@
           <tr>
             <th>No</th>
             <th>Nama</th>
+            <th>Jenis</th>
             <th>Isi</th>
             <th>Gambar</th>
             <th>action</th>
@@ -44,7 +34,8 @@
           <tr>
             <td>{{$no++}}</td>
             <td><a href="{{ route('linkprofile', $profile->id) }}">{{$profile->nama_profile}}</a></td>
-            <td>{{$profile->isi_profile}}</td>
+            <td>{{$profile->jenis_profile}}</td>
+            <td>{!!$profile->isi_profile!!}</td>
             <td>{{$profile->gambar_profile}}</td>
              <td>
               <form style="float:left" action="/profile/{{$profile->id}}" method="post">

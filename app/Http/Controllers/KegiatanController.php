@@ -9,15 +9,28 @@ use Laravel\Kegiatan;
 use Laravel\User;
 
 
-class BlogController extends Controller
+class KegiatanController extends Controller
 {
     public function index()
     {
 
       $kegiatans = Kegiatan::all();
+      $harians = Kegiatan::where('jenis_kegiatan','=','Harian')->get();
+      $mingguans = Kegiatan::where('jenis_kegiatan','=','Mingguan')->get();
+      $bulanans = Kegiatan::where('jenis_kegiatan','=','Bulanan')->get();
+      $semesterans = Kegiatan::where('jenis_kegiatan','=','Semesteran')->get();
+      $tahunans = Kegiatan::where('jenis_kegiatan','=','Tahunan')->get();
 
 
-      return view ('blog/home')->with('kegiatans', $kegiatans);
+
+
+      return view ('kegiatan/home')
+      ->with('kegiatans', $kegiatans)
+      ->with('harians',$harians)
+      ->with('mingguans',$mingguans)
+      ->with('bulanans',$bulanans)
+      ->with('semesterans',$semesterans)
+      ->with('tahunans',$tahunans);
     }
 
 
@@ -26,7 +39,7 @@ class BlogController extends Controller
          $kegiatans = Kegiatan::all();
 
 
-      return view ('blog/dashoard')->with('kegiatans', $kegiatans);
+      return view ('kegiatan/dashoard')->with('kegiatans', $kegiatans);
     }
 
 
@@ -40,14 +53,14 @@ class BlogController extends Controller
 
       dd('Halaman tidak ditemukan');
 
-      return view ('blog/single', ['blog'=>$id, 'kegiatan'=>$kegiatan]);
+      return view ('kegiatan/single', ['kegiatan'=>$id, 'kegiatan'=>$kegiatan]);
     }
 
 
 
     public function create()
     {
-      return view('blog/create');
+      return view('kegiatan/create');
     }
 
 
@@ -77,7 +90,7 @@ class BlogController extends Controller
       if (!$kegiatan)
       dd('Halaman tidak tersedia ');
 
-      return view ('blog/edit', ['blog'=>$id, 'kegiatan'=>$kegiatan]);
+      return view ('kegiatan/edit', ['kegiatan'=>$id, 'kegiatan'=>$kegiatan]);
     }
 
 
@@ -111,6 +124,6 @@ class BlogController extends Controller
       ->where('nama_kegiatan','like',"%".$cari."%")
       ->paginate();
 
-      return view ('blog/dashoard')->with('kegiatans', $kegiatans);
+      return view ('kegiatan/dashoard')->with('kegiatans', $kegiatans);
     }
 }

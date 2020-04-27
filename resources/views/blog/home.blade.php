@@ -8,7 +8,7 @@
   <div class="card">
     <div class="jumbotron jumbotron-fluid py-4">
       <div class="container text-center">
-        <img src="/img/logoPPMU.png" class="rounded-circle img-thumbnail" alt="" width="15%">
+        <img src="/img/artikelhome.png" class="d-block w-100" alt="img-responsive" width="50%">
       </div>
     </div>
 
@@ -48,7 +48,7 @@
               <div class="container">
                 <div class="row">
                   <div class="container text-center">
-                  @foreach($artikels as $artikel)
+                  @foreach($artikels2 as $artikel)
                      <a href="{{ route('link', $artikel->id) }}" style="width:200px; height:200px;border:1px transparent black;float:left;margin:20px">
                        <img src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px; height:200px">
                        <div class=""style="margin">
@@ -67,7 +67,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="container">
-                      @foreach($artikels as $artikel)
+                      @foreach($beritas as $artikel)
                          <a href="{{ route('link', $artikel->id) }}" style="width:200px; height:200px;border:1px transparent black;float:left;margin:20px">
                            <img src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px; height:200px">
                            <div class=""style="margin">

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'create artikel')
+@section('title', 'edit-artikel')
 
 @section('content')
 
@@ -16,22 +16,25 @@
 
   <div class="form-group">
     <label for="nama_artikel">Nama Artikel :</label>
-    <input type="text" class="form-control" name="nama_artikel"id="nama_artikel">
+    <input type="text" class="form-control" name="nama_artikel"id="nama_artikel" value="{{$artikel->nama_artikel}}">
   </div>
 
     <div class="form-group">
     <label for="jenis_artikel">Jenis Artikel :</label>
-    <input type="text" class="form-control" name="jenis_artikel"id="jenis_artikel">
+    <select class="form-control" name="jenis_artikel" id="exampleFormControlSelect">
+      <option value="berita" @if($artikel->jenis_artikel == "berita")selected @endif>berita</option>
+      <option value="artikel" @if($artikel->jenis_artikel == "artikel")selected @endif>artikel</option>
+    </select>
   </div>
 
     <div class="form-group">
     <label for="gambar_artikel">Gambar Artikel :</label>
-    <input type="file" class="form-control" name="gambar_artikel"id="gambar_artikel">
+    <input type="file" class="form-control" name="gambar_artikel"id="gambar_artikel">{{$artikel->gambar_artikel}}
   </div>
 
     <div class="form-group">
     <label for="isi_artikel">Isi Artikel :</label>
-    <textarea name="isi_artikel" rows="5" cols="45"></textarea>
+    <textarea class="ckeditor" id="isi_artikel" name="isi_artikel" rows="5" cols="45" >{!!$artikel->isi_artikel!!}</textarea>
   </div>
 
         <button type="submit" class="btn btn-primary" style="border: 2px">Edit</button>

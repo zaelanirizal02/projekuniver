@@ -13,6 +13,7 @@ use Laravel\Uks;
 use Laravel\Profile;
 use Laravel\Banner;
 use Laravel\Galeri;
+use Laravel\Kegiatan;
 class AdminController extends Controller
 {
     public function index()
@@ -26,7 +27,7 @@ class AdminController extends Controller
     public function artikel(Request $req)
     {
       $artikels = Artikel::all();
-      
+
       $query = $req->get('query');
 
       if (!is_null($query)) {
@@ -46,7 +47,7 @@ class AdminController extends Controller
 
       $organisasis = Organisasi::all();
 
-      return view ('admin.dashboard',['organisasis'=>$organisasis]);
+      return view ('admin.organisasi',['organisasis'=>$organisasis]);
     }
 
     public function santri()
@@ -84,4 +85,9 @@ class AdminController extends Controller
       return view ('admin.galeri',['galeris'=>$galeris]);
     }
 
+    public function kegiatan()
+    {
+      $kegiatans = kegiatan::all();
+      return view ('admin.kegiatan',['kegiatans'=>$kegiatans]);
+    }
 }

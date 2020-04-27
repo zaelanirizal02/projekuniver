@@ -13,7 +13,23 @@ class ProfileController extends Controller
     public function index()
     {
       $profile = Profile::All();
-      return view('profile/home')->with('profile', $profile);
+      $sejarahs = Profile::where('jenis_profile','=','Sejarah')->get();
+      $visimisis = Profile::where('jenis_profile','=','Visi_misi')->get();
+      $dasarhukums = Profile::where('jenis_profile','=','Dasar_hukum')->get();
+      $kurikulums = Profile::where('jenis_profile','=','Kurikulum')->get();
+      $sistempenilaians = Profile::where('jenis_profile','=','Sistem_penilaian')->get();
+      $tradisis = Profile::where('jenis_profile','=','Tradisi')->get();
+      $fasilitass = Profile::where('jenis_profile','=','Fasilitas')->get();
+
+      return view('profile/home')
+      ->with('profile', $profile)
+      ->with('sejarahs', $sejarahs)
+      ->with('visimisis',$visimisis)
+      ->with('dasarhukums',$dasarhukums)
+      ->with('kurikulums',$kurikulums)
+      ->with('sistempenilaians',$sistempenilaians)
+      ->with('tradisis',$tradisis)
+      ->with('fasilitass',$fasilitass);
     }
 
     public function create()
@@ -36,6 +52,7 @@ class ProfileController extends Controller
     {
       $profile = new Profile;
       $profile->nama_profile = $req->nama_profile;
+      $profile->jenis_profile = $req->jenis_profile;
       $profile->isi_profile = $req->isi_profile;
       $file = $req->file('gambar_profile');
       $ext = $file->getClientOriginalExtension();
@@ -44,7 +61,7 @@ class ProfileController extends Controller
       $profile->gambar_profile = $newName;
       $profile->save();
 
-      return redirect('profile');
+      return redirect('dashboard/profile');
     }
 
     public function edit($id)
@@ -64,6 +81,7 @@ class ProfileController extends Controller
 
       $profile->update([
         'nama_profile' => $req->nama_profile,
+        'jenis_profile' => $req->jenis_profile,
         'isi_profile' => $req->isi_profile,
         'gambar_profile' => $req->gambar_profile,
       ]);
@@ -76,6 +94,6 @@ class ProfileController extends Controller
     {
        $profile= Profile::find($id);
        $profile->delete();
-       return redirect('profile');
+       return redirect('dashboard/profile');
     }
 }

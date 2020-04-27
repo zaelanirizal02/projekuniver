@@ -33,6 +33,7 @@
           <tr>
             <th>No</th>
             <th>Nama</th>
+            <th>jenis</th>
             <th>Isi</th>
             <th>Gambar</th>
             <th>action</th>
@@ -44,7 +45,8 @@
           <tr>
             <td>{{$no++}}</td>
             <td><a href="{{ route('linkuks', $uks->id) }}">{{$uks->nama_uks}}</a></td>
-            <td>{{$uks->isi_uks}}</td>
+            <td>{{$uks->jenis_uks}}</td>
+            <td>{!!$uks->isi_uks!!}</td>
             <td>{{$uks->gambar_uks}}</td>
              <td>
               <form style="float:left" action="/uks/{{$uks->id}}" method="post">

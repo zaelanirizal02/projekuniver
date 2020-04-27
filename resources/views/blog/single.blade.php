@@ -97,7 +97,7 @@
                     <img src="/img_artikel/{{$artikel->gambar_artikel}}"  style="width:50%">
                   </div>
                   <div class="text py-3 my-2 mx-2" style="border-box">
-                    <p>{{$artikel->isi_artikel}}</p>
+                    <p>{!!$artikel->isi_artikel!!}</p>
                   </div>
 
             </div>

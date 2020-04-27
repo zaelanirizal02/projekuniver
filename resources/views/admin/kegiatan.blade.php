@@ -23,7 +23,7 @@
     </div> -->
     <div class="card-body">
       <div class="container"style="padding-top:px">
-  <h1 class="display-5 text-center pt-1 font-weight-bold">GALERI</h1>
+  <h1 class="display-5 text-center pt-1 font-weight-bold">KEGIATAN</h1>
         <hr>
 
         <a href="/kegiatan/create" class="btn btn-info">Create</a>
@@ -35,7 +35,7 @@
             <th>Nama</th>
             <th>jenis</th>
             <th>Gambar</th>
-            <th>keterangan</th>
+            <th>Isi</th>
             <th>action</th>
           </tr>
         </thead>
@@ -47,7 +47,7 @@
             <td><a href="{{ route('linkkegiatan', $kegiatan->id) }}">{{$kegiatan->nama_kegiatan}}</a></td>
             <td>{{$kegiatan->jenis_kegiatan}}</td>
             <td>{{$kegiatan->gambar_kegiatan}}</td>
-            <td>{{$kegiatan->keterangan_kegiatan}}</td>
+            <td>{!!$kegiatan->isi_kegiatan!!}</td>
              <td>
               <form style="float:left" action="/kegiatan/{{$kegiatan->id}}" method="post">
               <input class="btn btn-danger" type="submit" name="submit" value="delete">

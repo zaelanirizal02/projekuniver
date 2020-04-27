@@ -20,7 +20,7 @@
 <div class="container py-5">
   <div class="card">
     <div class="jumbotron-fluid pt-2" style="background-color:white">
-      <img src="/img/header3.png" class="d-block w-100 px-2" alt="img-responsive"  width="50%">
+      <img src="/img/organisasihome.png" class="d-block w-100 px-2" alt="img-responsive"  width="50%">
     </div>
     <div class="card-body py-0">
       <div class="accordion" id="accordionExample">

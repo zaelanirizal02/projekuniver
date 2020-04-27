@@ -15,24 +15,27 @@ use Illuminate\Http\Request;
 
 Route::get('/', 'Indexcontroller@index');
 
+//
+// Route::group(['prefix' => 'blog','middleware' => 'auth'], function (){
+//   Route::get('/', 'BlogController@index')->middleware('auth');
+//   Route::get('/dasboard', 'BlogController@dasboard');
+//   Route::get('/create', 'BlogController@create');
+//   Route::post('/', 'BlogController@store');
+//   Route::get('/{id}', 'BlogController@show')->name('linkartikel');
+//   Route::get('/{id}/edit', 'BlogController@edit')->name('ngeditartikel');
+//   Route::put('/{id}', 'BlogController@update');
+//   Route::delete('/{id}', 'BlogController@destroy');
+//
+// });
 
-Route::group(['prefix' => 'blog','middleware' => 'auth'], function (){
-  Route::get('/', 'BlogController@index')->middleware('auth');
-  Route::get('/dasboard', 'BlogController@dasboard');
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog/create', 'BlogController@create');
+Route::post('/blog', 'BlogController@store');
+Route::get('/blog/{id}', 'BlogController@show')->name('linkartikel');
+Route::get('/blog/{id}/edit', 'BlogController@edit')->name('ngeditartikel');
+Route::post('/blog/{id}', 'BlogController@update');
+Route::delete('/blog/{id}', 'BlogController@destroy');
 
-
-  Route::get('/create', 'BlogController@create');
-  Route::post('/', 'BlogController@store');
-
-
-  Route::get('/{id}', 'BlogController@show')->name('linkartikel');
-
-  Route::get('/{id}/edit', 'BlogController@edit')->name('ngeditartikel');
-  Route::put('/{id}', 'BlogController@update');
-
-  Route::delete('/{id}', 'BlogController@destroy');
-
-});
 
 
 
@@ -46,49 +49,44 @@ Route::get('/auth/register','RegisterController@create');
 
 //organisasi
 Route::get('/organisasi/home', 'OrganisasiController@index');
-
 Route::get('/organisasi/create', 'OrganisasiController@create');
 Route::post('/organisasi', 'OrganisasiController@store');
-Route::get('/organisasi/dashboard', 'OrganisasiController@dashboard');
-
-Route::get('/organisasi/{id}', 'OrgainsasiController@show')->name('linkorganisasi');
-
+Route::get('/organisasi/{id}', 'OrganisasiController@show')->name('linkorganisasi');
 Route::get('/organisasi/{id}/edit', 'OrganisasiController@edit')->name('ngeditorganisasi');
-
-Route::put('/organisasi/{id}', 'OrganisasiController@update');
-
+Route::post('/organisasi/{id}', 'OrganisasiController@update');
 Route::delete('/organisasi/{id}', 'OrganisasiController@destroy');
 
 
 
 //profile
 
-Route::group(['prefix' => 'profile','middleware' => 'auth'], function (){
-Route::get('/home', 'ProfileController@index');
+// Route::group(['prefix' => 'profile','middleware' => 'auth'], function (){
+// Route::get('/home', 'ProfileController@index');
+// Route::get('/create', 'ProfileController@create');
+// Route::post('', 'ProfileController@store');
+// Route::get('/{id}', 'ProfileController@show')->name('linkprofile');
+// Route::get('/{id}/edit', 'ProfileController@edit')->name('ngeditprofile');
+// Route::put('/{id}', 'ProfileController@update');
+// Route::delete('/{id}', 'ProfileController@destroy');
+// });
 
-Route::get('/create', 'ProfileController@create');
-Route::post('', 'ProfileController@store');
+Route::get('/profile/home', 'ProfileController@index');
+Route::get('/profile/create', 'ProfileController@create');
+Route::post('/profile', 'ProfileController@store');
+Route::get('/profile/{id}', 'ProfileController@show')->name('linkprofile');
+Route::get('/profile/{id}/edit', 'ProfileController@edit')->name('ngeditprofile');
+Route::put('/profile/{id}', 'ProfileController@update');
+Route::delete('/profile/{id}', 'ProfileController@destroy');
 
-Route::get('/{id}', 'ProfileController@show')->name('linkprofile');
-
-Route::get('/{id}/edit', 'ProfileController@edit')->name('ngeditprofile');
-Route::put('/{id}', 'ProfileController@update');
-
-Route::delete('/{id}', 'ProfileController@destroy');
-});
 
 
 //uks
 Route::get('/uks/home', 'UksController@index');
-
 Route::get('/uks/create', 'UksController@create');
 Route::post('/uks', 'UksController@store');
-
 Route::get('/uks/{id}', 'UksController@show')->name('linkuks');
-
 Route::get('/uks/{id}/edit', 'UksController@edit')->name('ngedituks');
 Route::put('/uks/{id}', 'UksController@update');
-
 Route::delete('/uks/{id}', 'UksController@destroy');
 
 
@@ -119,17 +117,21 @@ Route::delete('/banner/{id}', 'BannerController@destroy');
 
 
 //dashboard
+Route::group(['prefix' => 'dashboard','middleware' => 'auth'], function (){
+Route::get('/home', 'AdminController@index');
+Route::get('/organisasi', 'AdminController@organisasi');
+Route::get('/artikel', 'AdminController@artikel');
+Route::get('/santri', 'AdminController@santri');
+Route::get('/uks', 'AdminController@uks');
+Route::get('/profile', 'AdminController@profile');
+Route::get('/banner', 'AdminController@banner');
+Route::get('/galeri','AdminController@galeri');
+Route::get('/kegiatan', 'AdminController@kegiatan');
+});
 
-Route::get('/dashboard/home', 'AdminController@index');
-Route::get('/dashboard/organisasi', 'AdminController@organisasi');
-Route::get('/dashboard/artikel', 'AdminController@artikel');
-Route::get('/dashboard/santri', 'AdminController@santri');
-Route::get('/dashboard/uks', 'AdminController@uks');
-Route::get('/dashboard/profile', 'AdminController@profile');
-Route::get('/dashboard/banner', 'AdminController@banner');
-Route::get('/dashboard/galeri','AdminController@galeri');
 
 //Galery
+Route::get('/galeri/home', 'GaleriController@index');
 Route::get('/galeri/create','GaleriController@create');
 Route::post('/galeri', 'GaleriController@store');
 Route::get('/galeri/dashboard', 'GaleriController@dashboard');
@@ -137,3 +139,13 @@ Route::get('/galeri/{id}', 'GaleriController@show')->name('linkgaleri');
 Route::get('/galeri/{id}/edit', 'GaleriController@edit')->name('ngeditgaleri');
 Route::put('/galeri/{id}', 'GaleriController@update');
 Route::delete('/galeri/{id}', 'GaleriController@destroy');
+
+//Kegiatan
+Route::get('/kegiatan/home', 'KegiatanController@index');
+Route::get('/kegiatan/create','KegiatanController@create');
+Route::post('/kegiatan', 'KegiatanController@store');
+Route::get('/kegiatan/dashboard', 'KegiatanController@dashboard');
+Route::get('/kegiatan/{id}', 'KegiatanController@show')->name('linkkegiatan');
+Route::get('/kegiatan/{id}/edit', 'KegiatanController@edit')->name('ngeditkegiatan');
+Route::put('/kegiatan/{id}', 'KegiatanController@update');
+Route::delete('/kegiatan/{id}', 'KegiatanController@destroy');

@@ -13,25 +13,16 @@ class OrganisasiController extends Controller
     public function index()
     {
 
-      $organisasis = organisasi::all();
+      $organisasis = Organisasi::all();
 
 
       return view ('organisasi/home')->with('organisasis', $organisasis);
     }
 
-      public function dashboard()
-    {
-         $organisasis = organisasi::all();
-
-
-      return view ('organisasi/dashboard')->with('organisasis', $organisasis);
-    }
-
 
     public function show($id)
     {
-      $unescape = '<script> alert("Assalamualaikum") </script>';
-      $organisasi = organisasi::find($id);
+      $organisasi = Organisasi::find($id);
 
       if(!$organisasi)
 
@@ -62,7 +53,7 @@ class OrganisasiController extends Controller
       $organisasi->save();
 
 
-      return redirect('organisasi/dashboard');
+      return redirect('dashboard/organisasi');
     }
 
 
@@ -81,7 +72,7 @@ class OrganisasiController extends Controller
 
     public function update(Request $req, $id)
     {
-      $organisasi = organisasi::find($id);
+      $organisasi = Organisasi::find($id);
 
       $organisasi->update([
         'isi_organisasi' => $req->isi_organisasi,
@@ -89,7 +80,7 @@ class OrganisasiController extends Controller
         'gambar_organisasi' => $req->gambar_organisasi,
       ]);
 
-      return redirect()->back();
+      return redirect('dashboard/organisasi');
     }
 
 
@@ -97,6 +88,6 @@ class OrganisasiController extends Controller
     {
        $organisasi= organisasi::find($id);
        $organisasi->delete();
-       return redirect('organisasi');
+       return redirect('dashboard/organisasi');
     }
 }

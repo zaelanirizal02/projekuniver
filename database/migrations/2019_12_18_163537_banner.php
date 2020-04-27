@@ -13,7 +13,7 @@ class Banner extends Migration
      */
     public function up()
     {
-      Schema::create('banner', function (Blueprint $table) {
+      Schema::create('banners', function (Blueprint $table) {
         $table->bigIncrements('id');
         $table->string('nama_banner');
         $table->string('gambar_banner');

@@ -31,12 +31,12 @@ Universal | Data Artikel
     <option value="">{{$jenis->jenis_artikel}}</option>
   @endforeach
   </select>
-</div> 
+</div>
 
         <table class="table table-striped table-bordered">
         <thead class="warning">
           <tr>
-            <th>Nama</th>
+            <th>No</th>
             <th>Nama</th>
             <th >Jenis Artikel</th>
             <th>Gambar</th>

@@ -12,8 +12,17 @@ class UksController extends Controller
 {
     public function index()
     {
-      $uks = Uks::All();
-      return view('uks/home')->with('ukss', $uks);
+      $ukss = Uks::All(); $hadrohs = uks::where('jenis_uks','=','Hadroh')->get();
+      $nasyids = Uks::where('jenis_uks','=','Nasyid')->get();
+      $marawiss = Uks::where('jenis_uks','=','Marawis')->get();
+      $avicenas = Uks::where('jenis_uks','=','Avicena')->get();
+      $seblaks = Uks::where('jenis_uks','=','Seblak_Basho')->get();
+      $tradisis = Uks::where('jenis_uks','=','Tradisi')->get();
+      $tukangs = Uks::where('jenis_uks','=','Tukang_Pelm')->get();
+
+
+
+      return view ('uks/home')->with('ukss', $ukss)->with('hadrohs',$hadrohs)->with('marawiss',$marawiss)->with('avicenas',$avicenas)->with('seblaks',$seblaks)->with('tradisis',$tradisis)->with('tukangs',$tukangs)->with('nasyids',$nasyids);
     }
 
     public function create()
@@ -36,6 +45,7 @@ class UksController extends Controller
     {
       $uks = new Uks;
       $uks->nama_uks = $req->nama_uks;
+      $uks->jenis_uks = $req->jenis_uks;
       $uks->isi_uks = $req->isi_uks;
       $file = $req->file('gambar_uks');
       $ext = $file->getClientOriginalExtension();
@@ -64,6 +74,7 @@ class UksController extends Controller
 
       $uks->update([
         'nama_uks' => $req->nama_uks,
+        'jenis_uks'=> $req->jenis_uks,
         'isi_uks' => $req->isi_uks,
         'gambar_uks' => $req->gambar_uks,
       ]);

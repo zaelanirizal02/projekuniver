@@ -167,7 +167,9 @@ section {cara menampilkan artikel dari databa
                           Disini di isi waktu
                         </div> -->
                         <div class="card-body">
+
                           <p class="card-text text-left text-dark justify-content-center" style="font-size:15px">{!! str_limit($artikel->isi_artikel, 10)!!}</p>
+
                         </div>
                       </div>
                     </div>

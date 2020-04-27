@@ -75,7 +75,10 @@ Route::get('/profile/create', 'ProfileController@create');
 Route::post('/profile', 'ProfileController@store');
 Route::get('/profile/{id}', 'ProfileController@show')->name('linkprofile');
 Route::get('/profile/{id}/edit', 'ProfileController@edit')->name('ngeditprofile');
+
 Route::post('/profile/{id}', 'ProfileController@update');
+
+
 Route::delete('/profile/{id}', 'ProfileController@destroy');
 
 
@@ -86,7 +89,10 @@ Route::get('/uks/create', 'UksController@create');
 Route::post('/uks', 'UksController@store');
 Route::get('/uks/{id}', 'UksController@show')->name('linkuks');
 Route::get('/uks/{id}/edit', 'UksController@edit')->name('ngedituks');
+
 Route::post('/uks/{id}', 'UksController@update');
+
+
 Route::delete('/uks/{id}', 'UksController@destroy');
 
 
@@ -137,7 +143,9 @@ Route::post('/galeri', 'GaleriController@store');
 Route::get('/galeri/dashboard', 'GaleriController@dashboard');
 Route::get('/galeri/{id}', 'GaleriController@show')->name('linkgaleri');
 Route::get('/galeri/{id}/edit', 'GaleriController@edit')->name('ngeditgaleri');
+
 Route::post('/galeri/{id}', 'GaleriController@update');
+
 Route::delete('/galeri/{id}', 'GaleriController@destroy');
 
 //Kegiatan
@@ -147,5 +155,7 @@ Route::post('/kegiatan', 'KegiatanController@store');
 Route::get('/kegiatan/dashboard', 'KegiatanController@dashboard');
 Route::get('/kegiatan/{id}', 'KegiatanController@show')->name('linkkegiatan');
 Route::get('/kegiatan/{id}/edit', 'KegiatanController@edit')->name('ngeditkegiatan');
+
 Route::post('/kegiatan/{id}', 'KegiatanController@update');
+
 Route::delete('/kegiatan/{id}', 'KegiatanController@destroy');

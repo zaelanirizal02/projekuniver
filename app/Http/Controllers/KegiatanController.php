@@ -105,7 +105,7 @@ class KegiatanController extends Controller
         'gambar_kegiatan' => $req->gambar_kegiatan,
       ]);
 
-      return redirect()->back();
+      return redirect('dashboard/kegiatan');
     }
 
 

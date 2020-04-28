@@ -86,7 +86,7 @@ class ProfileController extends Controller
         'gambar_profile' => $req->gambar_profile,
       ]);
 
-      return redirect()->back();
+      return redirect('dashboard/profile');
     }
 
 

@@ -10,7 +10,7 @@
 
 <h1 class="text-center">EDIT PROFILE</h1>
 <div class="container" style=" width: 700px; height:300px">
-<form action="/profile" method="post" enctype="multipart/form-data" style="padding:10px; border:1px solid black">
+<form action="/profile/{{$profile->id}}" method="post" enctype="multipart/form-data" style="padding:10px; border:1px solid black">
 
 
 

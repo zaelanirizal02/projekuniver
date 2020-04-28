@@ -7,16 +7,18 @@ use Illuminate\Support\Facades\DB;
 
 use Laravel\Galeri;
 use Laravel\User;
+use Laravel\Artikel;
+use Laravel\Kegiatan;
 
 class GaleriController extends Controller
 {
     public function index()
     {
 
-      $galeris = Galeri::all();
+      $artikels = Artikel::all();
 
 
-      return view ('galeri/home')->with('galeris', $galeris);
+      return view ('galeri/home')->with('artikels', $artikels);
     }
 
 

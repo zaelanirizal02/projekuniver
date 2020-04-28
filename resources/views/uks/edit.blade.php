@@ -8,9 +8,9 @@
 <div class="" style="padding-top:50px">
 
 
-<h1 class="text-center">EDIT KEGIATAN</h1>
+<h1 class="text-center">EDIT UKS</h1>
 <div class="container" style=" width: 500px; height:300px">
-<form action="/uks" method="post" enctype="multipart/form-data" style="padding:10px; border:1px solid black">
+<form action="/uks/{{$uks->id}}" method="post" enctype="multipart/form-data" style="padding:10px; border:1px solid black">
 
 
   <div class="form-group">

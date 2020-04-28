@@ -79,7 +79,7 @@ class UksController extends Controller
         'gambar_uks' => $req->gambar_uks,
       ]);
 
-      return redirect()->back();
+      return redirect('dashboard/uks');
     }
 
 

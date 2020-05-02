@@ -95,7 +95,7 @@ section {cara menampilkan artikel dari databa
 
 <!-- Page 1 -->
 <section>
-  <div class="jumbotron-fluid" style="background:#094f1b" alt="img-responsive">
+  <div class="jumbotron-fluid shadow" style="background:#094f1b" alt="img-responsive">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -104,10 +104,10 @@ section {cara menampilkan artikel dari databa
           <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner justify-content-center " style="background:">
-          @foreach($artikels as $i => $artikel)
+          @foreach($banners as $i => $banner)
           <div class="carousel-item @if($i == 0) {{ 'active' }} @endif ">
-            <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block img-fluid" alt="Responsive image" style="height:50%; width:100%; margin:10px"></a>
-            <!-- <p class="carousel-caption text-center font-weight-bold bg-dark" style="opacity: 0.8; font-size:25px">{{ str_limit($artikel->nama_artikel, 50)}}</p> -->
+            <a href="{{ route('link', $banner->id) }}"><img src="img_banner/{{$banner->gambar_banner}}" class="mx-auto d-block img-fluid" alt="Responsive image" style="height:577px; width:100%"></a>
+
           </div>
           @endforeach
         </div>
@@ -130,13 +130,12 @@ section {cara menampilkan artikel dari databa
 
 <!-- Page 2 -->
 
-<section id="page2" class="kegiatan">
-  <div class="container pb-5" id="kegiatan" class="kegiatan">
-    <div class="row" style="padding-top:50px">
-      <div class="col-sm-6 rounded-lg  img-thumbnail" style="background-color:#fffff">
-        <div class="container mb-3 py-3">
+<section id="page2" class="">
+  <div class="container py-5">
+    <div class="row row-cols-2" style="padding-top:50px">
+      <div class="col-sm-6 rounded-lg img-thumbnail shadow" style="background-color:#fffff">
+        <div class="container mb-3 py-3 px-0">
           <!-- <h2>POPULER</h2> -->
-
           <!-- Nav tabs -->
           <ul class="nav nav-tabs font-weight-bold" role="tablist">
             <li class="nav-item">
@@ -153,87 +152,70 @@ section {cara menampilkan artikel dari databa
           <!-- Tab panes -->
           <div class="tab-content">
             <div id="menuBerita" class="container tab-pane active"><br>
-              <div class="card rounded my-3" style="max-width: 500px;">
-                <div class="container">
+
                   @foreach($beritas as $i => $artikel)
-                  <div class="row py-2">
+                  <div class="row pb-2 mb-3 shadow">
                     <div class="col-md-4 text-center">
                       <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
                     </div>
                     <div class="col-md-8">
-                      <div class="card">
-                        <p class="card-header text-left font-weight-bold text-dark justify-content-center" style="font-size:15px">{{ str_limit($artikel->nama_artikel, 25)}}</p>
-                        <!-- <div class="">
-                          Disini di isi waktu
-                        </div> -->
-                        <div class="card-body">
-
-                          <p class="card-text text-left text-dark justify-content-center" style="font-size:15px">{!! str_limit($artikel->isi_artikel, 10)!!}</p>
-
+                      <div class="card border-white" style="">
+                        <div class="card-body text-left ">
+                          <p class="card-header text-left font-weight-bold text-dark d-flex justify-content-start" style="font-size:15px;background-color:white">{{ str_limit($artikel->nama_artikel, 70)}}</p>
+                          <p class="card-text text-left text-dark " style="font-size:10px">{!! str_limit($artikel->isi_artikel, 80)!!}</p>
+                          <a href="{{ route('link', $artikel->id) }}" class="card-link">Selengkapnya</a>
                         </div>
                       </div>
                     </div>
                   </div>
                   @endforeach
-                </div>
-              </div>
+
+
 
             </div>
             <div id="menuArtikel" class="container tab-pane fade"><br>
-              <div class="card rounded my-3" style="max-width: 500px;">
-                <div class="container">
-                  @foreach($artikels2 as $i => $artikel)
-                  <div class="row py-2">
-                    <div class="col-md-4 text-center">
-                      <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card">
-                        <p class="card-header text-left font-weight-bold text-dark justify-content-center" style="font-size:15px">{{ str_limit($artikel->nama_artikel, 25)}}</p>
-                        <!-- <div class="">
-                          Disini di isi waktu
-                        </div> -->
-                        <div class="card-body">
-                          <p class="card-text text-left text-dark justify-content-center" style="font-size:15px">{!! str_limit($artikel->isi_artikel, 20)!!}</p>
-                        </div>
-                      </div>
+
+              @foreach($artikels2 as $i => $artikel)
+              <div class="row pb-2 mb-3 shadow">
+                <div class="col-md-4 text-center">
+                  <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
+                </div>
+                <div class="col-md-8">
+                  <div class="card border-white" style="">
+                    <div class="card-body text-left ">
+                      <p class="card-header text-left font-weight-bold text-dark d-flex justify-content-start" style="font-size:15px;background-color:white">{{ str_limit($artikel->nama_artikel, 70)}}</p>
+                      <p class="card-text text-left text-dark " style="font-size:10px">{!! str_limit($artikel->isi_artikel, 80)!!}</p>
+                      <a href="{{ route('link', $artikel->id) }}" class="card-link">Selengkapnya</a>
                     </div>
                   </div>
-                  @endforeach
                 </div>
               </div>
+              @endforeach
+
+
+
             </div>
 
-            <div id="menuDownload" class="container tab-pane"><br>
+            <div id="menuDownload" class="container tab-pane fade"><br>
               <div class="card rounded my-3" style="max-width: 500px;">
-                <div class="container">
-                  <div class="row py-2">
-                    <div class="col-md-4 text-center">
-                      <img src="img/logoPPMU.png" class="card-img img-thumbnail rounded mx-auto d-block" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body text-sm-left">
-                        <h5 class="card-title" href="/" >Berita 1</h5>
-                        <p class="card-text">Isi Berita 1</p>
-                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="container-fluid pb-1">
+          <a href="/blog" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat lebih banyak</a>
+        </div>
       </div>
 
     <div class="col-sm-6" >
-      <div class="container mb-3 py-3 px-3 rounded-lg  img-thumbnail" style="background-color:white" >
+      <div class="container mb-3 py-3 px-3 rounded-lg  img-thumbnail shadow" style="background-color:white" >
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pViPQvwXT5w" allowfullscreen></iframe>
         </div>
       </div>
 
-        <div class="container mb-auto pt-3 px-3 rounded-lg  img-thumbnail"  style="background-color:white">
+        <div class="container mb-auto pt-3 px-3 pb-4 rounded-lg  img-thumbnail shadow"  style="background-color:white">
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -247,9 +229,7 @@ section {cara menampilkan artikel dari databa
               </div>
             </div>
           </div>
-          <div class="card-body  text-center">
-            <a href="/profile/home" class="btn btn-primary">Lihat Profile</a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -261,13 +241,19 @@ section {cara menampilkan artikel dari databa
 
 <!-- Page 3 -->
 <section id="page3">
-    <div class="container pb-5" id="kegiatan" class="kegiatan">
-      <div class="row" style="padding-top:50px; padding-bottom:50px">
-        <div class="col">
-          <a href="/" data-toggle="tooltip" data-placement="top" title="pilih untuk melihat lebih banyak Foto">
-          <div class="card card-link bg-dark text-white mx-1 mb-1 rounded-lg">
+  <div class="jumbotron-fluid mt-5 pt-3 shadow">
+    <div class="container text-center pb-3">
+      <h1 class="display-4 " style="color:#3282B8">GALERI</h1>
+  </div>
+  </div>
+
+    <div class="container pb-5 pt-4">
+      <div class="row" style="padding-bottom:50px">
+        <div class="card-deck">
+          <div class="card border-white">
+            <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">BERITA</h5>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner" style="opacity:0.5">
+              <div class="carousel-inner py-2 px-2">
                 <div class="carousel-item active">
                     <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
                 </div>
@@ -279,39 +265,12 @@ section {cara menampilkan artikel dari databa
                 </div>
               </div>
             </div>
-            <div class="card-img-overlay">
-              <h5 class="card-title">BERITA</h5>
-            </div>
+              <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
           </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="/" data-toggle="tooltip" data-placement="top" title="pilih untuk melihat lebih banyak Foto">
-          <div class="card bg-dark text-white mx-1 mb-1 rounded-lg">
+          <div class="card border-white">
+            <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">FASILITAS</h5>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner" style="opacity:0.5">
-                <div class="carousel-item active">
-                    <img src="img/Slider/Slider2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Slider/Slider3.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-            </div>
-            <div class="card-img-overlay">
-              <h5 class="card-title">FASILITAS</h5>
-            </div>
-          </div>
-          </a>
-        </div>
-        <div class="col">
-          <a href="/" data-toggle="tooltip" data-placement="top" title="pilih untuk melihat lebih banyak Foto">
-          <div class="card bg-dark text-white mx-1 mb-1 rounded-lg">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner" style="opacity:0.5">
+              <div class="carousel-inner py-2 px-2">
                 <div class="carousel-item active">
                     <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
                 </div>
@@ -323,11 +282,25 @@ section {cara menampilkan artikel dari databa
                 </div>
               </div>
             </div>
-            <div class="card-img-overlay">
-              <h5 class="card-title">UKS</h5>
-            </div>
+              <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
           </div>
-          </a>
+          <div class="card border-white">
+            <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">UNIT KEGIATAN</h5>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner py-2 px-2">
+                <div class="carousel-item active">
+                    <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Slider/Slider3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Slider/Slider2.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+            </div>
+              <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
+          </div>
         </div>
     </div>
   </div>
@@ -337,16 +310,15 @@ section {cara menampilkan artikel dari databa
 
 <!-- Page 4 karya -->
   <section id="karya" style="padding-top:20px; padding-bottom:50px; background-color:#3282B8">
-  <div class="jumbotron-fluid py-2">
-    <div class="container text-white text-center">
+  <div class="jumbotron-fluid pb-2 shadow">
+    <div class="container text-white text-center pb-2">
       <h1 class="display-4">KARYA SANTRI</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
   </div>
-  <div class="container py-auto" >
+  <div class="container py-4" >
     <div class="row" style="padding-bottom:20px">
       <div class="col rounded-lg py-auto">
-        <div class="card">
+        <div class="card shadow">
           <div class="embed-responsive embed-responsive-16by9 ">
             <iframe class="container pt-2 px-2 rounded-lg img-thumbnail" width="727" height="409" src="https://www.youtube.com/embed/r6JyyZapQz8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
           </div>
@@ -358,7 +330,7 @@ section {cara menampilkan artikel dari databa
         </div>
       </div>
       <div class="col rounded-lg py-auto">
-        <div class="card">
+        <div class="card shadow">
           <div class="embed-responsive embed-responsive-16by9 ">
             <iframe class="container pt-2 px-2 rounded-lg img-thumbnail" width="727" height="409" src="https://www.youtube.com/embed/dGCbi5gurJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -375,7 +347,7 @@ section {cara menampilkan artikel dari databa
     <div class="container">
       <div class="row">
         <div class="col rounded-lg pb-auto-lg">
-          <div class="card"  style="background:#ffff">
+          <div class="card shadow"  style="background:#ffff">
             <div class="embed-responsive embed-responsive-16by9 pt-2" style="width:100%;height:100px">
               <iframe class="container py-2 px-2 rounded-lg" width="727" height="409" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/612140550&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"  allowfullscreen></iframe>
             </div>

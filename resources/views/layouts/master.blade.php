@@ -50,7 +50,7 @@
 @endforeach
  </div> -->
 
-  <nav class="navbar navbar-expand-sm navbar-dark sticky-top font-weight-bold" style="background:#027cd9">
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top font-weight-bold" style="background-color:#3282B8">
       <div class="container">
 
       <a class="navbar-brand" href="/">BERANDA</a>
@@ -60,26 +60,29 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto font-weight-bold">
-          <li class="nav-item">
+          <li class="nav-item px-1">
             <a class="nav-link" href="/profile/home">PROFIL</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item px-1">
             <a class="nav-link" href="/organisasi/home">ORGANISASI</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item px-1">
             <a class="nav-link" href="/uks/home">UKS</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item px-1">
             <a class="nav-link" href="/blog ">ARTIKEL</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item px-1">
             <a class="nav-link" href="/kegiatan/home">KEGIATAN</a>
           </li>
+          <li class="nav-item px-1">
+            <a class="nav-link" href="/galeri/home">GALERI</a>
+          </li>
         </ul>
-        <form class="form-inline my-sm-0">
+        <!-- <form class="form-inline my-sm-0">
           <input class="form-control mr-sm-2" type="search" placeholder=". . . . ." aria-label="Search">
           <button class="btn btn-outline-light my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
 
       @if(Auth::user())

@@ -12,7 +12,8 @@ class UksController extends Controller
 {
     public function index()
     {
-      $ukss = Uks::All(); $hadrohs = uks::where('jenis_uks','=','Hadroh')->get();
+      $ukss = Uks::All();
+      $hadrohs = uks::where('jenis_uks','=','Hadroh')->get();
       $nasyids = Uks::where('jenis_uks','=','Nasyid')->get();
       $marawiss = Uks::where('jenis_uks','=','Marawis')->get();
       $avicenas = Uks::where('jenis_uks','=','Avicena')->get();

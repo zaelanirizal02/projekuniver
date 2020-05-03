@@ -18,7 +18,7 @@
 </section>
 
 <div class="container py-5">
-  <div class="card">
+  <div class="card shadow">
     <div class="jumbotron-fluid pt-2" style="background-color:white">
       <img src="/img/organisasihome.png" class="d-block w-100 px-2" alt="img-responsive"  width="50%">
     </div>
@@ -27,8 +27,8 @@
         <div class="row text-center">
           <div class="col-sm">
             <div class="card mt-3">
-              <div class="card" id="headingOne">
-                  <button class="btn btn-link text-light py-2 img-thumbnail border-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:#3282B8">
+              <div class="card shadow" id="headingOne">
+                  <button class="btn btn-link py-2 img-thumbnail border-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:#f7f7f7">
                     <h5 class="mb-0">DEWAN PENGASUH</h5>
                   </button>
               </div>
@@ -36,8 +36,8 @@
           </div>
           <div class="col-sm">
             <div class="card mt-3">
-              <div class="card" id="headingOne">
-                  <button class="btn btn-link text-light py-2 img-thumbnail border-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-color:#3282B8">
+              <div class="card shadow" id="headingOne">
+                  <button class="btn btn-link py-2 img-thumbnail border-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-color:#f7f7f7">
                     <h5 class="mb-0">DEWAN SANTRI</h5>
                   </button>
               </div>
@@ -48,7 +48,7 @@
         <div class="row py-1">
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="col py-4 pr-3">
-              <div class="card-header text-center">
+              <div class="card-header text-center shadow">
                     Dewan Pengasuh
                 <div class="card-body">
                   <div class="text-center mx-2">
@@ -64,7 +64,7 @@
           <div class="col-sm">
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
               <div class="col py-4 pr-3">
-                <div class="card-header text-center">
+                <div class="card-header text-center shadow">
                       Dewan Santri
                   <div class="card-body">
                     <div class="text-center mx-2">

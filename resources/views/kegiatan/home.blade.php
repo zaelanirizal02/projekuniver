@@ -20,7 +20,7 @@
 
 </section>
 <div class="container py-5">
-  <div class="card">
+  <div class="card shadow">
   <div class="jumbotron-fluid py-2" style="background-color:white">
     <img src="/img/kegiatanhome.png" class="d-block w-100 px-2" alt="img-responsive"  width="50%">
     <div class="container text-black text-center">
@@ -134,55 +134,48 @@
           @endforeach
         </div>
         </div>
-        <div class="col-sm">
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-            @foreach($semesterans as $i => $kegiatan)
-          <div class="col py-4 pr-3">
-            <div class="card-header text-center">
-                  {{$kegiatan->nama_kegiatan}}
-              <div class="card-body">
-                <div class="text-center mx-2">
-                  <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
+                <div class="col-sm">
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    @foreach($semesterans as $i => $kegiatan)
+                  <div class="col py-4 pr-3">
+                    <div class="card-header text-center">
+                          {{$kegiatan->nama_kegiatan}}
+                      <div class="card-body">
+                        <div class="text-center mx-2">
+                          <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
+                        </div>
+                        <div  class="text py-3 my-2 mx-2" style="border-box">
+                          {!!$kegiatan->isi_kegiatan!!}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  @endforeach
+              </div>
+                <div class="col-sm">
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                     @foreach($tahunans as $i => $kegiatan)
+                  <div class="col py-4 pr-3">
+                    <div class="card-header text-center">
+                          {{$kegiatan->nama_kegiatan}}
+                      <div class="card-body">
+                        <div class="text-center mx-2">
+                          <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
+                        </div>
+                        <div  class="text py-3 my-2 mx-2" style="border-box">
+                          {!!$kegiatan->isi_kegiatan!!}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  @endforeach
                 </div>
-                <div  class="text py-3 my-2 mx-2" style="border-box">
-                  {!!$kegiatan->isi_kegiatan!!}
-                </div>
-
-
-
-
-
               </div>
             </div>
           </div>
-          @endforeach
         </div>
-        <div class="col-sm">
-          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-             @foreach($tahunans as $i => $kegiatan)
-          <div class="col py-4 pr-3">
-            <div class="card-header text-center">
-                  {{$kegiatan->nama_kegiatan}}
-              <div class="card-body">
-                <div class="text-center mx-2">
-                  <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
-                </div>
-                <div  class="text py-3 my-2 mx-2" style="border-box">
-                  {!!$kegiatan->isi_kegiatan!!}
-                </div>
-
-
-
-
-
-              </div>
-            </div>
-          </div>
-          @endforeach
-        </div>
-
-
-  </div>
+      </div>
+    </div>
   </div>
 </div>
 

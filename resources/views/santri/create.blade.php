@@ -4,21 +4,25 @@
 
 @section('content')
 
-  <div class="jumbotron jumbotron-fluid" style="background-color:#d1d1d1">
-    <div class="container">
-      <h1 class="display-4 text-center pt-4 font-weight-bold">PENDAFTARAN SANTRI</h1>
-        <h3 class="lead text-center font-weight-bold pt-0">Pondok Pesantren Mahasiswa Universal</h3>
+<div class="card">
+
+    <div class="card-header">
+      <h4 class="display-4 text-center pt-1 font-weight-bold">INPUT DATA SANTRI</h4>
+        <h5 class="lead text-center font-weight-bold pt-0">Pondok Pesantren Mahasiswa Universal</h5>
     </div>
-  </div>
 
-<div class="container" style=" width: 900px; height:600px">
-<form action="/santri" method="post" enctype="multipart/form-data" style="padding:10px; border:1px solid black">
+<div class="card-body">
 
-<div class="container text-center mb-3 font-weight-bold" style="background-color:#d1d1d1">
-  Data Pribadi
+<div class="container border-0" style=" width: 1000px">
+<form action="/santri" method="post" enctype="multipart/form-data">
+<div class="card rounded-lg shadow">
+<div class="card-header text-center mb-3 pt-3 font-weight-bold border-bottom">
+  DATA PRIBADI
 </div>
+<div class="card-body">
 
-  <div class="form-row">
+
+  <div class="form-group row  mb-3">
     <label for="nis_santri" class="col-sm-3 col-form-label">NIS </label>
       <div class="col-sm-9">
         <input type="number" class="form-control" name="nis_santri" id="nis_santri">
@@ -117,12 +121,15 @@
     </div>
   </div>
 </div>
-
-
-<br>
-<div class="container text-center mb-3 font-weight-bold" style="background-color:#d1d1d1">
-  Data Orang Tua
 </div>
+</div>
+
+<!-- DATA ORANGTUA -->
+<div class="card mt-5 shadow">
+<div class="card-header text-center mb-3 font-weight-bold">
+  DATA ORANG TUA
+</div>
+<div class="card-body">
 <div class="form-group">
   <div class="row">
     <div class="col">
@@ -186,12 +193,14 @@
   </div>
     </div>
 </div>
-
-
-<br>
-<div class="container text-center mb-3 font-weight-bold" style="background-color:#d1d1d1">
-  Pendidkan
 </div>
+</div>
+
+<div class="card mt-5 shadow">
+<div class="card-header text-center mb-3 font-weight-bold">
+  PENDIDIKAN
+</div>
+<div class="card-body">
 
 <div class="form-group">
   <div class="row">
@@ -254,11 +263,15 @@
       <input type="text" class="form-control" name="asalpesantren_santri"id="asalpesantren_santri">
     </div>
 </div>
-<br>
-<br>
-<div class="container text-center mb-3 font-weight-bold" style="background-color:#d1d1d1">
-  Data Lain
 </div>
+</div>
+
+
+<div class="card mt-5 shadow">
+<div class="card-header text-center mb-3 font-weight-bold">
+  DATA LAIN
+</div>
+<div class="card-body">
 <div class="form-group">
   <div class="row">
     <div class="col-sm-2 ">
@@ -309,15 +322,31 @@
 </div>
 <div class="form-group row mt-4">
     <label for="gambar_santri" class="col-sm-3 col-form-label">Upload Photo :</label>
-    <div class="col-sm-9">
+    <div class="col-sm-9"  data-toggle="tooltip" data-placement="top" title="File Max. 2 mb">
       <input type="file" class="form-control" name="gambar_santri" id="gambar_santri" style="width:300px;height:50px">
     </div>
 </div>
 
-  <button type="submit" class="btn btn-primary" style="border: 2px">Create</button>
-        {{ csrf_field() }}
-    </form>
-  </div>
 
+  </div>
+</div>
+</form>
+</div>
+<div class="card-footer mt-5" style="background-color:white">
+  <button type="submit" class="btn btn-block btn-primary shadow-lg">CREATE</button>
+        {{ csrf_field() }}
+</div>
+</div>
+</div>
+
+<section id="footer" class="footer">
+  <div class="jumbotron-fluid text-light" style="background:#1B2626" >
+    <div class="container text-center">
+      <div class="footer-copyright text-center py-1">© 2019 Copyright :
+        <a > PPMU </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     @endsection

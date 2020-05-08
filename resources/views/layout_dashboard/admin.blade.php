@@ -20,7 +20,8 @@
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color:#baed77">
+
+  <nav class="main-header navbar navbar-expand navbar-dark mb-2" style="background-color:#3282B8">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -43,6 +44,12 @@
         <li class="nav-item">
           <a class="nav-link" href="/blog ">Artikel</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/kegiatan/home ">Kegiatan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/galeri/home ">Galeri</a>
+        </li>
       </ul>
     </ul>
 
@@ -52,68 +59,63 @@
       <!-- Messages Dropdown Menu -->
 
       <!-- Notifications Dropdown Menu -->
+      @if(Auth::user())
+      <form class="nav-item" action="/logout" method="post" style="padding-right:50px">
+        @csrf
+        <div class="row float-right">
+          <div class="col-md-4">
 
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
+          </div>
+          <div class="col-md-4">
+            <button class="btn-light rounded-lg" type="submit" name="button">Logout</button>
+          </div>
+        </div>
+
+      </form>
+      @endif
+
     </ul>
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: linear-gradient(to bottom, #000066 0%, #660066 100%)">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4 shadow" style="background:#1B2626">
     <!-- Brand Logo -->
-    <a href="/dashboard/home" class="brand-link">
-      <img src="/img/logoPPMU2.png" alt="Logo" style="display: block; margin: auto; width:200px; height:40px;" class="rounded img-thumbnail mb-4 container">
-
-    </a>
-
+      <img src="/img/dashboardlogo.png" alt=" responsive image" style="display: block; margin-top:30px; width:200px; background-color:transparent;border:none" class="rounded img-thumbnail mb-4 container">
     <!-- Sidebar -->
 
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
+      <nav class="mt-0">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+
+          <li class="nav-item">
+            <a href="/dashboard/home" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
             <a href="/dashboard/artikel" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon far fa-folder-open"></i>
               <p>
                 Daftar Artikel
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right">{{count(\Laravel\Artikel::all())}}</span>  </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="/dashboard/profile" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Profile
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">{{count(\Laravel\Profile::all())}}</span>
+              </p>
             </a>
           </li>
           <li class="nav-item">
@@ -123,6 +125,16 @@
                 Organisasi
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right">{{count(\Laravel\Organisasi::all())}}</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="/dashboard/uks" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                UKS
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">{{count(\Laravel\Uks::all())}}</span>
               </p>
             </a>
           </li>
@@ -136,44 +148,17 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="/dashboard/santri" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Santri PPMU
-                <i class="right fas fa-angle-left"></i>
-                <span class="badge badge-info right">{{count(\Laravel\Santri::all())}}</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="/dashboard/uks" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
-              <p>
-                UKS
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">{{count(\Laravel\Uks::all())}}</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="/dashboard/profile" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Profile PPMU
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">{{count(\Laravel\Profile::all())}}</span>
-              </p>
-            </a>
-          </li>
+
+
+
 
           <li class="nav-item has-treeview">
             <a href="/dashboard/banner" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Ganti Banner Depan
+                Banner Awal
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right"></span>
+                <span class="badge badge-info right">{{count(\Laravel\Banner::all())}}</span>
               </p>
             </a>
           </li>
@@ -183,6 +168,19 @@
               <i class="nav-icon far fa-image"></i>
               <p>
                 Gallery
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">{{count(\Laravel\Galeri::all())}}</span>
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/dashboard/santri" class="nav-link">
+              <i class="nav-icon fas fa-id-card"></i>
+              <p>
+                Santri PPMU
+                <i class="right fas fa-angle-left"></i>
+                <span class="badge badge-info right">{{count(\Laravel\Santri::all())}}</span>
               </p>
             </a>
           </li>

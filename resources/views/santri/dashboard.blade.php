@@ -11,8 +11,8 @@
 
 <div class="container">
 
-  <a href="/santri/create" class="btn btn-info">Create</a>
-  <a href="/santri/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
+  <a href="/santri/create" class="btn btn-lg btn-primary">Create</a>
+  <a href="/santri/export_excel" class="btn btn-lg btn-success my-3" target="_blank">EXPORT EXCEL</a>
 
   {{-- notifikasi form validasi --}}
 		@if ($errors->has('file'))
@@ -29,7 +29,7 @@
 		</div>
 		@endif
 
-		<button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
+		<button type="button" class="btn btn-lg btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
 			IMPORT EXCEL
 		</button>
 

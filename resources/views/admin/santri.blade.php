@@ -11,8 +11,8 @@
 
 <div class="container">
 
-  <a href="/santri/create" class="btn btn-info">Create</a>
-  <a href="/santri/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
+  <a href="/santri/create" class="btn btn-sm btn-primary mr-2">Create</a>
+  <a href="/santri/export_excel" class="btn btn-sm btn-success my-3 mr-2" target="_blank">EXPORT EXCEL</a>
 
   {{-- notifikasi form validasi --}}
 		@if ($errors->has('file'))
@@ -29,7 +29,7 @@
 		</div>
 		@endif
 
-		<button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
+		<button type="button" class="btn btn-sm btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
 			IMPORT EXCEL
 		</button>
 
@@ -68,6 +68,7 @@
   <thead class="warning">
     <tr>
       <th>No</th>
+      <th>NIS</th>
       <th>Nama</th>
       <th>Jenis Kelamin</th>
       <th>Angkatan</th>
@@ -80,19 +81,21 @@
     @foreach($santris as $santri)
     <tr>
       <td>{{$no++}}</td>
-      <td>{{$santri->nama_santri}}</td>
-      <td>{{$santri->jk_santri}}</td>
+      <td>{!! str_limit($santri->nis_santri, 10)!!}</td>
+      <td>{!! str_limit($santri->nama_santri, 17)!!}</td>
+    
+      <td>{!! str_limit($santri->jk_santri, 9)!!}</td>
       <td>{{$santri->angkatan_santri}}</td>
-      <td>{{$santri->kota_santri}}</td>
+      <td>{!! str_limit($santri->kota_santri, 10)!!}</td>
       <td>
       <form style="float:left" action="/santri/{{$santri->id}}" method="post">
-        <input class="btn btn-danger" type="submit" name="submit" value="delete">
+        <input class="btn btn-sm btn-danger" type="submit" name="submit" value="DELETE">
         <input type="hidden" name="_method" value="DELETE">
         {{ csrf_field() }}
       </form>
 
-      <span style="padding:5px">|</span>
-      <a class="btn btn-success" href="{{route('ngeditsantri', $santri->id)}}">EDIT</a>
+      <span style="padding:5px"> </span>
+      <a class="btn btn-sm btn-success" href="{{route('ngeditsantri', $santri->id)}}">EDIT</a>
       </td>
 
 

@@ -9,32 +9,37 @@
 
 <!-- Main content -->
 <section class="content">
-
-  <!-- Default box -->
-  <div class="card">
-    <!-- <div class="card-header">
-
-      <div class="card-tools">
-        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-          <i class="fas fa-minus"></i></button>
-        <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-          <i class="fas fa-times"></i></button>
-      </div>
-    </div> -->
+  <div class="card my-3 mx-0 shadow">
+    <div class="card-header">
+      <h1 class="text-center font-weight-bold">GALERI</h1>
+    </div>
     <div class="card-body">
       <div class="container"style="padding-top:px">
-  <h1 class="display-5 text-center pt-1 font-weight-bold">GALERI</h1>
-        <hr>
+        <div class="row">
+          <div class="col-7">
+            <a href="/galeri/create" class="btn btn-sm btn-primary">CREATE</a>
+          </div>
+          <div class="col-1">
 
-        <a href="/galeri/create" class="btn btn-info">Create</a>
+          </div>
+          <div class="col-1 text-right">
 
-        <table class="table table-striped table-bordered">
+          </div>
+          <div class="col-3 text-right">
+
+          </div>
+
+        </div>
+
+
+
+        <table class="table table-striped table-bordered mt-3">
         <thead class="warning">
           <tr>
             <th>No</th>
             <th>Nama</th>
             <th>jenis</th>
-            <th>Gambar</th>
+            <!-- <th>Gambar</th> -->
             <th>keterangan</th>
             <th>action</th>
           </tr>
@@ -46,18 +51,18 @@
             <td>{{$no++}}</td>
             <td><a href="{{ route('linkgaleri', $galeri->id) }}">{{$galeri->nama_galeri}}</a></td>
             <td>{{$galeri->jenis_galeri}}</td>
-            <td>{{$galeri->gambar_galeri}}</td>
-            <td>{{$galeri->keterangan_galeri}}</td>
+            <!-- <td>{{$galeri->gambar_galeri}}</td> -->
+            <td>{!! str_limit($galeri->keterangan_galeri, 70)!!}</td>
              <td>
               <form style="float:left" action="/galeri/{{$galeri->id}}" method="post">
-              <input class="btn btn-danger" type="submit" name="submit" value="delete">
+              <input class="btn btn-sm btn-danger" type="submit" name="submit" value="DELETE">
               <input type="hidden" name="_method" value="DELETE">
               {{ csrf_field() }}
 
             </form>
 
             <span style="padding:5px">|</span>
-            <a class="btn btn-success" href="{{ route('ngeditgaleri', $galeri->id) }}">Edit</a>
+            <a class="btn btn-sm btn-success" href="{{ route('ngeditgaleri', $galeri->id) }}">EDIT</a>
             </td>
 
 
@@ -70,7 +75,7 @@
     </div>
     <!-- /.card-body -->
     <div class="card-footer">
-      Footer
+    
     </div>
     <!-- /.card-footer-->
   </div>

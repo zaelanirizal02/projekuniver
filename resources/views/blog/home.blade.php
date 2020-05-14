@@ -21,7 +21,7 @@
         <img src="/img/artikelhome.png" class="d-block w-100 px-2" alt="img-responsive" width="50%">
     </div>
 
-    <div class="card-body pt-0" style="padding-bottom:70px">
+    <div class="card-body pt-1">
       <div class="accordion" id="accordionExample">
         <div class="row text-center">
           <div class="col-sm">
@@ -44,61 +44,72 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="card border-0">
-
-
+        <div class="card border-0">
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="d-flex justify-content-center">
+            <div class="card-deck pt-4 justify-content-center">
               @foreach($artikels2 as $artikel)
-                <div class="row px-2">
-                  <div class="container">
-                    <a href="{{ route('link', $artikel->id) }}" style="width:200px; height:200px">
-                      <div class="card border-0 shadow mt-3">
-                       <img src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px;height:200px">
-                        <div class="card-header text-uppercase font-weight-bold" style="background-color:white;font-size:12px">
-                           {{ str_limit($artikel->nama_artikel, 50)}}
-                         </div>
+                <a href="{{ route('link', $artikel->id) }}">
+                    <img class="card-img-top shadow-sm" src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px;height:200px">
+                    <div class="card-body px-1 mx-2 mb-3 border-bottom"  style="width:200px; height:200px">
+                      <div class="card-title text-uppercase font-weight-bold" style="background-color:white;font-size:12px">
+                         {{ str_limit($artikel->nama_artikel, 70)}}
+                       </div>
+                       <span class="card-text text-left text-dark font-italic" style="font-size:12px">
+                         <p >{!! str_limit($artikel->isi_artikel, 80)!!}</p>
+                        </span>
                       </div>
-                    </a>
-                    </div>
-                </div>
+                </a>
               @endforeach
-            </div>
-            <div class="card-footer pb-2" style="margin-top:100px">
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
+              <div class="container pt-0 mb-0" style="margin-top:100px">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+              </div>
             </div>
           </div>
-        </div>
-          <div class="col-sm">
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                <div class="container">
-                  <div class="row">
-                    <div class="container">
-                      @foreach($beritas as $artikel)
-                         <a href="{{ route('link', $artikel->id) }}" style="width:200px; height:200px;border:1px transparent black;float:left;margin:20px">
-                           <img src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px; height:200px">
-                           <div class=""style="margin">
-                             {{$artikel->nama_artikel}}
-                           </div>
-                         </a>
-                      @endforeach
-                    </div>
-                  </div>
-                </div>
+
+
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-deck pt-4 justify-content-center">
+              @foreach($beritas as $artikel)
+
+                <a href="{{ route('link', $artikel->id) }}">
+                    <img class="card-img-top" src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px;height:200px">
+                    <div class="card-body px-1 mx-2 pb-1 border-bottom"  style="width:200px; height:200px">
+                      <div class="card-title text-uppercase font-weight-bold" style="background-color:white;font-size:12px">
+                         {{ str_limit($artikel->nama_artikel, 70)}}
+                       </div>
+                       <span class="card-text text-left text-dark font-italic" style="font-size:12px">
+                         <p >{!! str_limit($artikel->isi_artikel, 80)!!}</p>
+                        </span>
+
+                      </div>
+                </a>
+              @endforeach
+              <div class="container pt-0 mb-0" style="margin-top:100px">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
               </div>
             </div>
           </div>

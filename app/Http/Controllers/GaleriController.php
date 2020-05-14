@@ -9,16 +9,37 @@ use Laravel\Galeri;
 use Laravel\User;
 use Laravel\Artikel;
 use Laravel\Kegiatan;
+use Laravel\Uks;
 
 class GaleriController extends Controller
 {
     public function index()
     {
 
+
       $artikels = Artikel::all();
+      $beritas= Artikel::where('jenis_artikel','=', 'berita')->get();
+      $artikels2= Artikel::where('jenis_artikel','=', 'artikel')->get();
+
+      // $ukss = Uks::All();
+      // $hadrohs = uks::where('jenis_uks','=','Hadroh')->get();
+      // $nasyids = Uks::where('jenis_uks','=','Nasyid')->get();
+      // $marawiss = Uks::where('jenis_uks','=','Marawis')->get();
+      // $avicenas = Uks::where('jenis_uks','=','Avicena')->get();
+      // $seblaks = Uks::where('jenis_uks','=','Seblak_Basho')->get();
+      // $tradisis = Uks::where('jenis_uks','=','Tradisi')->get();
+      // $tukangs = Uks::where('jenis_uks','=','Tukang_Pelm')->get();
+
+      $galeris = Galeri::All();
+      $fasilitass = Galeri::where('jenis_galeri','=','fasilitas')->get();
+      $ukegiatans = Galeri::where('jenis_galeri','=','ukegiatan')->get();
 
 
-      return view ('galeri/home')->with('artikels', $artikels);
+      return view ('galeri/home')
+          ->with('artikels', $artikels)->with('beritas',$beritas)->with('artikels2' , $artikels2)
+          ->with('galeris', $galeris)->with('fasilitass', $fasilitass)->with('ukegiatans', $ukegiatans);
+          // ->with('ukss', $ukss)->with('hadrohs',$hadrohs)->with('marawiss',$marawiss)->with('avicenas',$avicenas)->with('seblaks',$seblaks)->with('tradisis',$tradisis)->with('tukangs',$tukangs)->with('nasyids', $nasyids);
+
     }
 
 

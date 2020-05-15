@@ -9,6 +9,8 @@ use Laravel\Artikel;
 use Laravel\Banner;
 use Laravel\Uks;
 use Laravel\Organisasi;
+use Laravel\Profile;
+use Laravel\Galeri;
 
 class Indexcontroller extends Controller
 {
@@ -18,10 +20,17 @@ class Indexcontroller extends Controller
       $artikels = Artikel::orderBy('created_at', 'desc')->limit(3)->get();
       $beritas= Artikel::where('jenis_artikel','=', 'berita')->limit(3)->get();
       $artikels2= Artikel::where('jenis_artikel','=', 'artikel')->limit(3)->get();
+    
       $ukss= Uks::all();
       $banners= Banner::all();
+      $profile= Profile::all();
+      $galeris = Galeri::All();
+      $fasilitass = Galeri::where('jenis_galeri','=','fasilitas')->get();
+      $ukegiatans = Galeri::where('jenis_galeri','=','ukegiatan')->get();
 
-      return view ('home')->with('artikels', $artikels)->with('ukss',$ukss)->with('banners',$banners)->with('beritas',$beritas)->with('artikels2' , $artikels2);
+      return view ('home')->with('artikels', $artikels)->with('ukss',$ukss)->with('profile',$profile)
+      ->with('banners',$banners)->with('beritas',$beritas)->with('artikels2' , $artikels2)
+      ->with('galeris', $galeris)->with('fasilitass', $fasilitass)->with('ukegiatans', $ukegiatans);
     }
 
 

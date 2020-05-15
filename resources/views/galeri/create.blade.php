@@ -29,8 +29,8 @@
         <div class="col-sm-4">
           <label for="jenis_galeri">Jenis Galeri :</label>
           <select class="form-control" name="jenis_galeri"id="jenis_galeri">
-          <option value="Acara">Acara</option>
-          <option value="kegiatan">kegiatan</option>
+          <option value="fasilitas">Fasilitas</option>
+          <option value="ukegiatan">Unit Kegiatan</option>
           </select>
 <br>
           <div class="form-group" data-toggle="tooltip" data-placement="top" title="File Max. 2 mb">

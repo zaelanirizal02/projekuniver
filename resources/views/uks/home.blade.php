@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'universal | home | Kegiatan')
+@section('title', 'universal | UKS')
 
 
 

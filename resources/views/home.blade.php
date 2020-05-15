@@ -218,7 +218,20 @@ section {cara menampilkan artikel dari databa
         <div class="container mb-auto pt-3 px-3 pb-4 rounded-lg  img-thumbnail shadow"  style="background-color:white">
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
+
+
+              @foreach($profile as $i => $profile)
+              <div class="carousel-item @if($i == 0) {{ 'active' }} @endif ">
+                <a href="/profile/home"><img src="img_profile/{{$profile->gambar_profile}}" class="mx-auto d-block img-fluid" alt="Responsive image" style="width:100%"></a>
+
+              </div>
+              @endforeach
+
+
+
+
+
+              <!-- <div class="carousel-item active">
                   <img src="img/Slider/Profil1.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
@@ -226,7 +239,7 @@ section {cara menampilkan artikel dari databa
               </div>
               <div class="carousel-item">
                 <img src="img/Slider/Profil3.jpg" class="d-block w-100" alt="...">
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -247,61 +260,47 @@ section {cara menampilkan artikel dari databa
   </div>
   </div>
 
-    <div class="container pb-5 pt-4">
-      <div class="row" style="padding-bottom:50px">
-        <div class="card-deck">
-          <div class="card border-white">
-            <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">BERITA</h5>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner py-2 px-2">
-                <div class="carousel-item active">
-                    <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
+  <div class="container pt-3" style="padding-bottom:70px">
+    <div class="row">
+      <div class="col-sm-4 text-center">
+          <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">BERITA</h5>
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner py-2 px-2">
+              @foreach($artikels as $i => $artikel)
+                <div class="carousel-item @if($i == 0) {{ 'active' }} @endif ">
+                  <a href="/galeri/home"><img src="/img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:350px;height:300px"></a>
                 </div>
-                <div class="carousel-item">
-                  <img src="img/Slider/Slider3.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Slider/Slider2.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
+              @endforeach
             </div>
-              <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
           </div>
-          <div class="card border-white">
-            <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">FASILITAS</h5>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner py-2 px-2">
-                <div class="carousel-item active">
-                    <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
+          <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
+      </div>
+      <div class="col-sm-4 text-center">
+          <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">FASILITAS</h5>
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner py-2 px-2">
+              @foreach($fasilitass as $i => $galeri)
+                <div class="carousel-item @if($i == 0) {{ 'active' }} @endif ">
+                  <a href="/galeri/home"><img src="/img_galeri/{{$galeri->gambar_galeri}}" alt="Snow" style="width:350px;height:300px"></a>
                 </div>
-                <div class="carousel-item">
-                  <img src="img/Slider/Slider3.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Slider/Slider2.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
+              @endforeach
             </div>
-              <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
           </div>
-          <div class="card border-white">
-            <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">UNIT KEGIATAN</h5>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner py-2 px-2">
-                <div class="carousel-item active">
-                    <img src="img/Slider/Slider1.jpg" class="d-block w-100" alt="...">
+          <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
+      </div>
+      <div class="col-sm-4 text-center">
+          <h5 class="card-header font-weight-bold text-center" style="background-color:white;color:#3282B8">UNIT KEGIATAN</h5>
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner py-2 px-2">
+              @foreach($ukegiatans as $i => $galeri)
+                <div class="carousel-item @if($i == 0) {{ 'active' }} @endif ">
+                  <a href="/galeri/home"><img src="/img_galeri/{{$galeri->gambar_galeri}}" alt="Snow" style="width:350px;height:300px"></a>
                 </div>
-                <div class="carousel-item">
-                  <img src="img/Slider/Slider3.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/Slider/Slider2.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
+              @endforeach
             </div>
-              <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
           </div>
-        </div>
+          <a href="/galeri/home" class="btn btn-primary btn-sm btn-block rounded-lg">Lihat Selengkapnya</a>
+      </div>
     </div>
   </div>
 </section>

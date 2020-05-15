@@ -18,6 +18,17 @@ class BlogController extends Controller
       $beritas= Artikel::where('jenis_artikel','=', 'berita')->get();
       $artikels2= Artikel::where('jenis_artikel','=', 'artikel')->get();
 
+      // // Beritas
+      //   // mengambil data dari table pegawai
+		  //   $beritas = Artikel::where('jenis_artikel','=', 'berita')->paginate(3);
+      //
+    	//   // mengirim data pegawai ke view index
+		  //   return view('blog/home',['jenis_artikel','=', 'berita' => $artikels]);
+
+
+
+
+
 
 
       return view ('blog/home')->with('artikels', $artikels)->with('beritas',$beritas)->with('artikels2' , $artikels2);

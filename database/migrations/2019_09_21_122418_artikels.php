@@ -17,8 +17,9 @@ class Artikels extends Migration
           $table->bigIncrements('id');
           $table->string('nama_artikel');
           $table->string('jenis_artikel');
-          $table->string('isi_artikel');
+          $table->text('isi_artikel');
           $table->string('gambar_artikel');
+          
           $table->timestamps();
       });
     }

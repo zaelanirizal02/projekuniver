@@ -14,9 +14,15 @@ class OrganisasiController extends Controller
     {
 
       $organisasis = Organisasi::all();
+      $dpengasuhs = Organisasi::where('jenis_organisasi','=','Dpengasuh')->get();
+      $dsantris = Organisasi::where('jenis_organisasi','=','Dsantri')->get();
 
 
-      return view ('organisasi/home')->with('organisasis', $organisasis);
+
+
+      return view ('organisasi/home')->with('organisasis', $organisasis)
+      ->with('dpengasuhs', $dpengasuhs)
+      ->with('dsantris', $dsantris);
     }
 
 
@@ -43,6 +49,7 @@ class OrganisasiController extends Controller
     public function store(Request $req)
     {
       $organisasi = new Organisasi;
+      $organisasi->nama_organisasi = $req->nama_organisasi;
       $organisasi->jenis_organisasi = $req->jenis_organisasi;
       $organisasi->isi_organisasi = $req->isi_organisasi;
       $file    = $req->file('gambar_organisasi');
@@ -75,6 +82,7 @@ class OrganisasiController extends Controller
       $organisasi = Organisasi::find($id);
 
       $organisasi->update([
+        'nama_organisasi' => $req->nama_organisasi,
         'isi_organisasi' => $req->isi_organisasi,
         'jenis_organisasi' => $req->jenis_organisasi,
         'gambar_organisasi' => $req->gambar_organisasi,

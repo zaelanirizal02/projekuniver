@@ -15,8 +15,9 @@ class Organisasi extends Migration
     {
         Schema::create('organisasis', function (Blueprint $table) {
           $table->bigIncrements('id');
+          $table->string('nama_organisasi');
           $table->string('jenis_organisasi');
-          $table->string('isi_organisasi');
+          $table->text('isi_organisasi');
           $table->string('gambar_organisasi');
           $table->timestamps();
       });

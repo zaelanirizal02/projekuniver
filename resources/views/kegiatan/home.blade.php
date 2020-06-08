@@ -72,9 +72,9 @@
       <div class="col-sm-9">
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
         @foreach($harians as $i => $kegiatan)
-          <div class="col py-4 pr-3">
-            <div class="card-header text-center">
-                  {{$kegiatan->nama_kegiatan}}
+        <div class="col py-4 pr-4">
+          <div class="card-header" style="background-color:white">
+              <h1 class="text-center">{{$kegiatan->nama_kegiatan}}</h1>
               <div class="card-body">
                 <div class="text-center mx-2">
                   <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
@@ -90,84 +90,74 @@
         <div class="col-sm">
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
              @foreach($mingguans as $i => $kegiatan)
-          <div class="col py-4 pr-3">
-            <div class="card-header text-center">
-                  {{$kegiatan->nama_kegiatan}}
-              <div class="card-body">
-                <div class="text-center mx-2">
-                  <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
-                </div>
-                <div  class="text py-3 my-2 mx-2" style="border-box">
-                  {!!$kegiatan->isi_kegiatan!!}
-                </div>
-
-
-
-
-
-              </div>
-            </div>
-          </div>
+             <div class="col py-4 pr-4">
+               <div class="card-header" style="background-color:white">
+                   <h1 class="text-center">{{$kegiatan->nama_kegiatan}}</h1>
+                   <div class="card-body">
+                     <div class="text-center mx-2">
+                       <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
+                     </div>
+                     <div  class="text py-3 my-2 mx-2" style="border-box">
+                       {!!$kegiatan->isi_kegiatan!!}
+                     </div>
+                   </div>
+                 </div>
+               </div>
           @endforeach
         </div>
         <div class="col-sm">
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             @foreach($bulanans as $i => $kegiatan)
-          <div class="col py-4 pr-3">
-            <div class="card-header text-center">
-                  {{$kegiatan->nama_kegiatan}}
-              <div class="card-body">
-                <div class="text-center mx-2">
-                  <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
+            <div class="col py-4 pr-4">
+              <div class="card-header" style="background-color:white">
+                  <h1 class="text-center">{{$kegiatan->nama_kegiatan}}</h1>
+                  <div class="card-body">
+                    <div class="text-center mx-2">
+                      <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
+                    </div>
+                    <div  class="text py-3 my-2 mx-2" style="border-box">
+                      {!!$kegiatan->isi_kegiatan!!}
+                    </div>
+                  </div>
                 </div>
-                <div  class="text py-3 my-2 mx-2" style="border-box">
-                  {!!$kegiatan->isi_kegiatan!!}
-                </div>
-
-
-
-
-
               </div>
-            </div>
-          </div>
           @endforeach
         </div>
         </div>
                 <div class="col-sm">
                   <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                     @foreach($semesterans as $i => $kegiatan)
-                  <div class="col py-4 pr-3">
-                    <div class="card-header text-center">
-                          {{$kegiatan->nama_kegiatan}}
-                      <div class="card-body">
-                        <div class="text-center mx-2">
-                          <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
-                        </div>
-                        <div  class="text py-3 my-2 mx-2" style="border-box">
-                          {!!$kegiatan->isi_kegiatan!!}
+                    <div class="col py-4 pr-4">
+                      <div class="card-header" style="background-color:white">
+                          <h1 class="text-center">{{$kegiatan->nama_kegiatan}}</h1>
+                          <div class="card-body">
+                            <div class="text-center mx-2">
+                              <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
+                            </div>
+                            <div  class="text py-3 my-2 mx-2" style="border-box">
+                              {!!$kegiatan->isi_kegiatan!!}
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
                   @endforeach
               </div>
                 <div class="col-sm">
                   <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                      @foreach($tahunans as $i => $kegiatan)
-                  <div class="col py-4 pr-3">
-                    <div class="card-header text-center">
-                          {{$kegiatan->nama_kegiatan}}
-                      <div class="card-body">
-                        <div class="text-center mx-2">
-                          <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
-                        </div>
-                        <div  class="text py-3 my-2 mx-2" style="border-box">
-                          {!!$kegiatan->isi_kegiatan!!}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                     <div class="col py-4 pr-4">
+                       <div class="card-header" style="background-color:white">
+                           <h1 class="text-center">{{$kegiatan->nama_kegiatan}}</h1>
+                           <div class="card-body">
+                             <div class="text-center mx-2">
+                               <img src="/img_kegiatan/{{$kegiatan->gambar_kegiatan}}" alt="" width="50%">
+                             </div>
+                             <div  class="text py-3 my-2 mx-2" style="border-box">
+                               {!!$kegiatan->isi_kegiatan!!}
+                             </div>
+                           </div>
+                         </div>
+                       </div>
                   @endforeach
                 </div>
               </div>

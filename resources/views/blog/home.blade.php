@@ -48,7 +48,7 @@
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-deck pt-4 justify-content-center">
               @foreach($artikels2 as $artikel)
-                <a href="{{ route('link', $artikel->id) }}">
+                <a href="{{ route('link', $artikel->slug) }}">
                     <img class="card-img-top shadow-sm" src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px;height:200px">
                     <div class="card-body px-1 mx-2 mb-3 border-bottom"  style="width:200px; height:200px">
                       <div class="card-title text-uppercase font-weight-bold" style="background-color:white;font-size:12px">
@@ -83,7 +83,7 @@
             <div class="card-deck pt-4 justify-content-center">
               @foreach($beritas as $artikel)
 
-                <a href="{{ route('link', $artikel->id) }}">
+                <a href="{{ route('link', $artikel->slug) }}">
                     <img class="card-img-top" src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px;height:200px">
                     <div class="card-body px-1 mx-2 pb-1 border-bottom"  style="width:200px; height:200px">
                       <div class="card-title text-uppercase font-weight-bold" style="background-color:white;font-size:12px">

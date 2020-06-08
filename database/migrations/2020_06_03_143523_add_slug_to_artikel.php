@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Kegiatan extends Migration
+class AddSlugToArtikel extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class Kegiatan extends Migration
      */
     public function up()
     {
-        Schema::create('kegiatans', function (Blueprint $table){
-          $table->bigIncrements('id');
-          $table->string('nama_kegiatan');
-          $table->text('isi_kegiatan');
-          $table->string('jenis_kegiatan');
-          $table->string('gambar_kegiatan');
-          $table->timestamps();
+        Schema::table('artikels', function (Blueprint $table) {
+            $table->string('slug')->nullable()->unique()->after('nama_artikel');
         });
     }
 
@@ -30,6 +25,8 @@ class Kegiatan extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('artikels', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
     }
 }

@@ -15,8 +15,8 @@ class BlogController extends Controller
     {
 
       $artikels = Artikel::all();
-      $beritas= Artikel::where('jenis_artikel','=', 'berita')->get();
-      $artikels2= Artikel::where('jenis_artikel','=', 'artikel')->get();
+      $beritas= Artikel::where('jenis_artikel','=', 'Berita')->paginate(10);
+      $artikels2= Artikel::where('jenis_artikel','=', 'Artikel')->paginate(10);
 
       // // Beritas
       //   // mengambil data dari table pegawai

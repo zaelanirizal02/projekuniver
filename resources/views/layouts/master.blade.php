@@ -93,7 +93,7 @@
 
           </div>
           <div class="col-md-4">
-            <button type="submit" name="button">Logout</button>
+            <button type="submit" name="button" class="btn btn-danger rounded-lg">Logout</button>
           </div>
         </div>
 

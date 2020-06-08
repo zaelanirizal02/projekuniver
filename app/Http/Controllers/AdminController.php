@@ -26,7 +26,7 @@ class AdminController extends Controller
 
     public function artikel(Request $req)
     {
-      $artikels = Artikel::all();
+      $artikels = Artikel::paginate(10);
 
       $query = $req->get('query');
 

@@ -15,8 +15,8 @@ class BlogController extends Controller
     {
 
       $artikels = Artikel::all();
-      $beritas= Artikel::where('jenis_artikel','=', 'berita')->get();
-      $artikels2= Artikel::where('jenis_artikel','=', 'artikel')->get();
+      $beritas= Artikel::where('jenis_artikel','=', 'Berita')->paginate(10);
+      $artikels2= Artikel::where('jenis_artikel','=', 'Artikel')->paginate(10);
 
       // // Beritas
       //   // mengambil data dari table pegawai
@@ -70,7 +70,6 @@ class BlogController extends Controller
     {
       $artikel = new Artikel;
       $artikel->nama_artikel = $req->nama_artikel;
-      $artikel->slug = str_slug($artikel->nama_artikel);
       $artikel->isi_artikel = $req->isi_artikel;
       $artikel->jenis_artikel = $req->jenis_artikel;
       $file    = $req->file('gambar_artikel');

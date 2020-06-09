@@ -46,36 +46,42 @@
         </div>
 
         <div class="row py-1">
+          <div class="col-sm">
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="col py-4 pr-3">
-              <div class="card-header text-center shadow">
-                    Dewan Pengasuh
+          @foreach($dpengasuhs as $i => $organisasi)
+          <div class="col py-4 pr-4">
+            <div class="card-header" style="background-color:white">
+                <h1 class="text-center">{{$organisasi->nama_organisasi}}</h1>
                 <div class="card-body">
                   <div class="text-center mx-2">
-                    <img src="/img/Slider/Slider1.jpg" alt="" width="50%">
+                    <img src="/img_organisasi/{{$organisasi->gambar_organisasi}}" alt="" width="50%">
                   </div>
-                  <div class="text py-3 my-2 mx-2" style="border-box">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <div  class="text py-3 my-2 mx-2" style="border-box">
+                    {!!$organisasi->isi_organisasi!!}
                   </div>
                 </div>
               </div>
             </div>
+            @endforeach
           </div>
-          <div class="col-sm">
+
+
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="col py-4 pr-3">
-                <div class="card-header text-center shadow">
-                      Dewan Santri
-                  <div class="card-body">
-                    <div class="text-center mx-2">
-                      <img src="/img/Slider/Slider2.jpg" alt="" width="50%">
-                    </div>
-                    <div class="text py-3 my-2 mx-2" style="border-box">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              @foreach($dsantris as $i => $organisasi)
+              <div class="col py-4 pr-4">
+                <div class="card-header" style="background-color:white">
+                    <h1 class="text-center">{{$organisasi->nama_organisasi}}</h1>
+                    <div class="card-body">
+                      <div class="text-center mx-2">
+                        <img src="/img_organisasi/{{$organisasi->gambar_organisasi}}" alt="" width="50%">
+                      </div>
+                      <div  class="text py-3 my-2 mx-2" style="border-box">
+                        {!!$organisasi->isi_organisasi!!}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                @endforeach
             </div>
           </div>
         </div>

@@ -156,14 +156,14 @@ section {cara menampilkan artikel dari databa
                   @foreach($beritas as $i => $artikel)
                   <div class="row pb-2 mb-3 shadow">
                     <div class="col-md-4 text-center">
-                      <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
+                      <a href="{{ route('link', $artikel->slug) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
                     </div>
                     <div class="col-md-8">
                       <div class="card border-white" style="">
                         <div class="card-body text-left ">
                           <p class="card-header text-left font-weight-bold text-dark d-flex justify-content-start" style="font-size:15px;background-color:white">{{ str_limit($artikel->nama_artikel, 70)}}</p>
                           <p class="card-text text-left text-dark " style="font-size:10px">{!! str_limit($artikel->isi_artikel, 80)!!}</p>
-                          <a href="{{ route('link', $artikel->id) }}" class="card-link">Selengkapnya</a>
+                          <a href="{{ route('link', $artikel->slug) }}" class="card-link">Selengkapnya</a>
                         </div>
                       </div>
                     </div>
@@ -178,14 +178,14 @@ section {cara menampilkan artikel dari databa
               @foreach($artikels2 as $i => $artikel)
               <div class="row pb-2 mb-3 shadow">
                 <div class="col-md-4 text-center">
-                  <a href="{{ route('link', $artikel->id) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
+                  <a href="{{ route('link', $artikel->slug) }}"><img src="img_artikel/{{$artikel->gambar_artikel}}" class="mx-auto d-block my-3 pb-4" alt="Cinque Terre" width="100%"></a>
                 </div>
                 <div class="col-md-8">
                   <div class="card border-white" style="">
                     <div class="card-body text-left ">
                       <p class="card-header text-left font-weight-bold text-dark d-flex justify-content-start" style="font-size:15px;background-color:white">{{ str_limit($artikel->nama_artikel, 70)}}</p>
                       <p class="card-text text-left text-dark " style="font-size:10px">{!! str_limit($artikel->isi_artikel, 80)!!}</p>
-                      <a href="{{ route('link', $artikel->id) }}" class="card-link">Selengkapnya</a>
+                      <a href="{{ route('link', $artikel->slug) }}" class="card-link">Selengkapnya</a>
                     </div>
                   </div>
                 </div>

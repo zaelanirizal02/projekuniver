@@ -48,42 +48,48 @@
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-deck pt-4 justify-content-center">
               @foreach($artikels2 as $artikel)
-              <a href="{{ route('link', $artikel->id) }}">
-                <img class="card-img-top shadow-sm" src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:100px;height:100px">
-                <div class="card-body px-1 mx-2 mb-3 border-bottom"  style="width:200px; height:200px">
-                  <div class="card-title text-uppercase font-weight-bold" style="background-color:white;font-size:12px">
-                   {{ str_limit($artikel->nama_artikel, 70)}}
-                 </div>
-                 <span class="card-text text-left text-dark font-italic" style="font-size:12px">
-                   <p >{!! str_limit($artikel->isi_artikel, 14)!!}</p>
-                 </span>
-               </div>
-             </a>
 
-             @endforeach
-            
+                <a href="{{ route('link', $artikel->id) }}">
+                    <img class="card-img-top shadow-sm" src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px;height:200px">
+                    <div class="card-body px-1 mx-2 mb-3 border-bottom"  style="width:200px; height:200px">
+                      <div class="card-title text-uppercase font-weight-bold" style="background-color:white;font-size:12px">
+                         {{ str_limit($artikel->nama_artikel, 70)}}
+                       </div>
+                       <span class="card-text text-left text-dark font-italic" style="font-size:12px">
+                         <p >{!! str_limit($artikel->isi_artikel, 80)!!}</p>
+                        </span>
+                      </div>
+                </a>
+              @endforeach
+             
+            </div>
+
           </div>
             {{ $artikels2->links()}}
         </div>
 
 
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-          <div class="card-deck pt-4 justify-content-center">
-            @foreach($beritas as $artikel)
 
-            <a href="{{ route('link', $artikel->id) }}">
-              <img class="card-img-top" src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:100px;height:100px">
-              <div class="card-body px-1 mx-2 pb-1 border-bottom"  style="width:100px; height:100px">
-                <div class="card-title text-uppercase font-weight-bold" style="background-color:white;font-size:12px">
-                 {{ str_limit($artikel->nama_artikel, 70)}}
-               </div>
-               <span class="card-text text-left text-dark font-italic" style="font-size:12px">
-                 <p >{!! str_limit($artikel->isi_artikel, 15)!!}</p>
-               </span>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-deck pt-4 justify-content-center">
+              @foreach($beritas as $artikel)
 
-             </div>
-           </a>
-           @endforeach
+                <a href="{{ route('link', $artikel->id) }}">
+                    <img class="card-img-top" src="img_artikel/{{$artikel->gambar_artikel}}" alt="Snow" style="width:200px;height:200px">
+                    <div class="card-body px-1 mx-2 pb-1 border-bottom"  style="width:200px; height:200px">
+                      <div class="card-title text-uppercase font-weight-bold" style="background-color:white;font-size:12px">
+                         {{ str_limit($artikel->nama_artikel, 70)}}
+                       </div>
+                       <span class="card-text text-left text-dark font-italic" style="font-size:12px">
+                         <p >{!! str_limit($artikel->isi_artikel, 80)!!}</p>
+                        </span>
+
+                      </div>
+                </a>
+              @endforeach
+           
+            </div>
+          </div>
 
         </div>
           {{ $beritas->links()}}

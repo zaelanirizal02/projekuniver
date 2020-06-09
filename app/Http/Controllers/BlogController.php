@@ -45,16 +45,16 @@ class BlogController extends Controller
 
 
 
-    public function show($id)
+    public function show($slug)
     {
       $unescape = '<script> alert("Assalamualaikum") </script>';
-      $artikel = Artikel::find($id);
+      $artikel = Artikel::where('slug','=', $slug)->first();
 
       if(!$artikel)
 
       dd('Halaman tidak ditemukan');
 
-      return view ('blog/single', ['blog'=>$id, 'artikel'=>$artikel]);
+      return view ('blog/single', ['blog'=>$slug, 'artikel'=>$artikel]);
     }
 
 

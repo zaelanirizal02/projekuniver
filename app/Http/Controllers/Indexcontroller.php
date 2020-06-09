@@ -20,7 +20,7 @@ class Indexcontroller extends Controller
       $artikels = Artikel::orderBy('created_at', 'desc')->limit(3)->get();
       $beritas= Artikel::where('jenis_artikel','=', 'berita')->limit(3)->get();
       $artikels2= Artikel::where('jenis_artikel','=', 'artikel')->limit(3)->get();
-    
+
       $ukss= Uks::all();
       $banners= Banner::all();
       $profile= Profile::all();
@@ -31,24 +31,28 @@ class Indexcontroller extends Controller
       return view ('home')->with('artikels', $artikels)->with('ukss',$ukss)->with('profile',$profile)
       ->with('banners',$banners)->with('beritas',$beritas)->with('artikels2' , $artikels2)
       ->with('galeris', $galeris)->with('fasilitass', $fasilitass)->with('ukegiatans', $ukegiatans);
+
+
+
     }
 
 
 
-    public function show ($id)
+    public function show ($slug)
     {
 
-      $artikels = Artikel::find($id);
+      $artikel = Artikel::where('slug','=', $slug)->first();
 
       dd('artikel tidak ditemukan');
 
-      return view ('blog/single', ['blog'=>$id, 'artikel'=>$artikel]);
+      return view ('blog/single', ['blog'=>$slug, 'artikel'=>$artikel]);
     }
 
     public function store(Requesr $req)
     {
       $artikel = new Artikel;
       $artikel->nama_artikel = $req->nama_artikel;
+      $artikel->slug = str_slug($artikel->nama_artikel);
       $artikel->isi_artikel = $req->isi_artikel;
       $artikel->jenis_artikel = $req->jenis_artikel;
       $artikel->gambar_artikel = $req->gambar_artikel;

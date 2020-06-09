@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Artikels extends Migration
+class Artikel extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,12 @@ class Artikels extends Migration
     public function up()
     {
       Schema::create('artikels', function (Blueprint $table) {
-          $table->bigIncrements('id');
-          $table->string('nama_artikel');
-          $table->string('jenis_artikel');
-          $table->string('isi_artikel');
-          $table->string('gambar_artikel');
-          $table->timestamps();
+        $table->bigIncrements('id');
+        $table->string('nama_artikel');
+        $table->string('jenis_artikel');
+        $table->string('gambar_artikel');
+        $table->text('isi_artikel');
+        $table->timestamps();
       });
     }
 

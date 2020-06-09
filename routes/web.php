@@ -45,7 +45,7 @@ Route::get('/{id}', 'BlogController@show')->name('link');
 
 
 //akun
-Route::get('/auth/register','RegisterController@create');
+Route::get('/auth/register','RegisterController@register');
 
 //organisasi
 Route::get('/organisasi/home', 'OrganisasiController@index');

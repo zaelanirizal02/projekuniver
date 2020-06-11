@@ -70,6 +70,7 @@ class BlogController extends Controller
     {
       $artikel = new Artikel;
       $artikel->nama_artikel = $req->nama_artikel;
+      $artikel->slug = str_slug($artikel->nama_artikel);
       $artikel->isi_artikel = $req->isi_artikel;
       $artikel->jenis_artikel = $req->jenis_artikel;
       $file    = $req->file('gambar_artikel');

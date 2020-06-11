@@ -18,7 +18,7 @@ Universal | Data Artikel
           Selamat datang pada halaman dashboard
         </div>
         <div class="card-footer border-top">
-          <a href="/auth/register" class="card-link mx-5">Daftar admin</a>
+          <a href="/dashboard/register" class="card-link mx-5">Daftar admin</a>
           <a href="#" class="card-link mx-5">Lupa Password</a>
         </div>
 

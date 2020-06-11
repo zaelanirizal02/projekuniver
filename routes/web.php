@@ -45,7 +45,7 @@ Route::get('/{id}', 'BlogController@show')->name('link');
 
 
 //akun
-Route::get('/auth/register','RegisterController@register');
+Route::get('adm/register','Auth\RegisterController@showRegisterForm');
 
 //organisasi
 Route::get('/organisasi/home', 'OrganisasiController@index');
@@ -133,6 +133,7 @@ Route::get('/profile', 'AdminController@profile');
 Route::get('/banner', 'AdminController@banner');
 Route::get('/galeri','AdminController@galeri');
 Route::get('/kegiatan', 'AdminController@kegiatan');
+Route::get('/register', 'AdminController@register'); 
 });
 
 

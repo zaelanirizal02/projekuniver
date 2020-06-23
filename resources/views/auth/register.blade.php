@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                  <img src="img/admin.png" class="mx-auto d-block rounded-circle" alt="Cinque Terre"style="width:80px;height:60px;"> <h2 class="text-center" >Register</h2>
+                  <img src="" class="mx-auto d-block rounded-circle" alt="Cinque Terre"style="width:80px;height:60px;"> <h2 class="text-center" >Register</h2>
                 </div>
 
                 <div class="card-body">

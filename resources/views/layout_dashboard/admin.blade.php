@@ -81,7 +81,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4 shadow" style="background:#1B2626">
     <!-- Brand Logo -->
-      <img src="/img/dashboardlogo.png" alt=" responsive image" style="display: block; margin-top:30px; width:200px; background-color:transparent;border:none" class="rounded img-thumbnail mb-4 container">
+      <a href="/dashboard/home"</a><img src="/img/dashboardlogo.png" alt=" responsive image" style="display: block; margin-top:30px; width:200px; background-color:transparent;border:none" class="rounded img-thumbnail mb-4 container">
     <!-- Sidebar -->
 
 
@@ -159,6 +159,19 @@
                 Banner Awal
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right">{{count(\Laravel\Banner::all())}}</span>
+              </p>
+            </a>
+          </li>
+
+
+
+          <li class="nav-item has-treeview">
+            <a href="/dashboard/fileupload" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Download Buku
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"><!-- {{count(\Laravel\Banner::all())}} --></span>
               </p>
             </a>
           </li>

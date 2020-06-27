@@ -53,7 +53,8 @@
   <nav class="navbar navbar-expand-sm navbar-dark sticky-top font-weight-bold" style="background-color:#3282B8">
       <div class="container">
 
-      <a class="navbar-brand" href="/">BERANDA</a>
+      <a class="navbar-brand" href="/">      <img src="/img/dashboardlogo.png" alt=" responsive image" style="display: block; height: 40px;  width:200px; background-color:transparent">
+</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

@@ -14,6 +14,7 @@ use Laravel\Profile;
 use Laravel\Banner;
 use Laravel\Galeri;
 use Laravel\Kegiatan;
+use Laravel\Fileupload;
 class AdminController extends Controller
 {
     public function index()
@@ -89,5 +90,12 @@ class AdminController extends Controller
     {
       $kegiatans = kegiatan::all();
       return view ('admin.kegiatan',['kegiatans'=>$kegiatans]);
+    }
+
+
+    public function fileupload()
+    {
+      $fileuploads = fileupload::all();
+      return view ('admin.fileupload',['fileuploads'=>$fileuploads]);
     }
 }

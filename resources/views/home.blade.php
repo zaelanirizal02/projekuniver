@@ -197,8 +197,27 @@ section {cara menampilkan artikel dari databa
             </div>
 
             <div id="menuDownload" class="container tab-pane fade"><br>
-              <div class="card rounded my-3" style="max-width: 500px;">
-              </div>
+              <table class="table table-striped table-bordered mt-2">
+                <thead>
+                  <tr>
+                    <th>Ebook</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+              @foreach($fileuploads as $i => $fileupload)
+                <tr>
+                <td>{{$fileupload->nama_fileupload}}
+                </td>
+                <td><a href="{{ route('downloadfile', $fileupload->id) }}"><i class="btn btn-primary">download</i></a>
+                </td>
+                </tr>
+             @endforeach
+             </tbody>
+             </table>
+             <div class="container-fluid pb-1">
+          <a href="/" class="btn btn-primary btn-sm btn-block rounded-lg">Download Ebook/Formulir Lainnya</a>
+        </div>
             </div>
           </div>
         </div>

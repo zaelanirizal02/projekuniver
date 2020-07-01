@@ -11,6 +11,7 @@ use Laravel\Uks;
 use Laravel\Organisasi;
 use Laravel\Profile;
 use Laravel\Galeri;
+use Laravel\Fileupload;
 
 class Indexcontroller extends Controller
 {
@@ -27,10 +28,12 @@ class Indexcontroller extends Controller
       $galeris = Galeri::All();
       $fasilitass = Galeri::where('jenis_galeri','=','fasilitas')->get();
       $ukegiatans = Galeri::where('jenis_galeri','=','ukegiatan')->get();
+      $fileuploads = Fileupload::All();
 
       return view ('home')->with('artikels', $artikels)->with('ukss',$ukss)->with('profile',$profile)
       ->with('banners',$banners)->with('beritas',$beritas)->with('artikels2' , $artikels2)
-      ->with('galeris', $galeris)->with('fasilitass', $fasilitass)->with('ukegiatans', $ukegiatans);
+      ->with('galeris', $galeris)->with('fasilitass', $fasilitass)->with('ukegiatans', $ukegiatans)
+      ->with('fileuploads', $fileuploads);
 
 
 
@@ -82,4 +85,6 @@ class Indexcontroller extends Controller
        $artikel->delete();
        return redirect('blog');
     }
+
+   
 }
